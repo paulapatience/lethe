@@ -181,7 +181,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../cfd/linear_solver_control.html">Linear Solver Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/multiphysics.html">Multiphysics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cfd/volume_of_fluid.html">Volume of Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cfd/volume_of_fluid.html">Multiphase Flow - Volume of Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/boundary_conditions_multiphysics.html">Boundary Contitions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/nitsche.html">Nitsche</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cfd/restart.html">Restart</a></li>
@@ -208,10 +208,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../resolved_cfd-dem/resolved_cfd-dem.html">Resolved CFD-DEM</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rpt/rpt_parameters.html">RPT parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rpt/detector_parameters.html">Detector parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rpt/parameter_tuning.html">Parameter tuning</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/examples.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/incompressible-flow/incompressible-flow.html">Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-lid%E2%80%90driven-cavity-flow/lid%E2%80%90driven-cavity-flow.html">1. 2D Lid-driven cavity flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-flow-around-cylinder/2d-flow-around-cylinder.html">2. 2D Flow around a cylinder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow/2d-taylor-couette-flow.html">3. 2D Taylor-Couette flow</a></li>
@@ -224,7 +230,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d_nitsche_mixer_with_pbt_impeller/nitsche_mixer_with_pbt_impeller.html">10. 3D Mixer with Pitched-Blade Turbine Impeller using Nitsche Immersed Boundary</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics Examples</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.html">1. Tracer through CAD Junction in Simplex</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">2. Rayleigh-Bénard Convection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/stefan_problem/stefan_problem.html">3. Stefan problem : melting of a solid</a></li>
@@ -235,30 +241,36 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/laser-meltpool/laser-meltpool.html">8. Laser meltpool</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/dem/dem.html">Discrete Element Method</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/dem/dem.html">Discrete Element Method</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/packing-in-circle/packing-in-circle.html">1. Packing in Circle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/packing-in-ball/packing-in-ball.html">2. Packing in Ball</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum/rotating-drum.html">3. Rotating Drum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum-with-post-processing/rotating-drum-with-post-processing.html">4. Rotating Drum with Post-Processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotation-of-box/rotation-of-box.html">5. Rotation of Box</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">6. Silo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/3d-small-scale-rotating-drum/3d-small-scale-rotating-drum.html">7. Small Scale Rotating Drum (3D)</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved_cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">1. Cylindrical Packed Bed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved_cfd-dem/square-fluidized-bed/square-fluidized-bed.html">2. Gas-Solid Fluidized Bed</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/resolved_cfd-dem/resolved_cfd-dem.html">Resolved CFD-DEM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/resolved_cfd-dem/resolved_cfd-dem.html">Resolved CFD-DEM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/resolved_cfd-dem/cylinder-with-sharp-interface/cylinder-with-sharp-interface.html">1. Flow around a cylinder using the sharp interface method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/resolved_cfd-dem/sedimentation-1-particle/sedimentation-1-particle.html">2. Sedimentation of one particle.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/resolved_cfd-dem/sphere-carreau-with-sharp-interface/sphere-carreau-with-sharp-interface.html">3. Non-Newtonian flow past a sphere</a></li>
 </ul>
 </li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/rpt/photon-count-calculation-in-a-cylindrical-vessel/photon-count-calculation-in-a-cylindrical-vessel.html">1. Photon Count Calculation in a Cylindrical Vessel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/rpt/tuning-parameters-with-nomad/tuning-parameters-with-nomad.html">2. Tuning Count Calculation Model Parameters with NOMAD</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../theory/theory.html">Theory</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/fluid_dynamics/fluid_dynamics.html">Fluid dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../theory/theory.html">Theory</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/fluid_dynamics/fluid_dynamics.html">Fluid dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../theory/fluid_dynamics/navier-stokes.html">The Incompressible Navier-Stokes equations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theory/fluid_dynamics/fem_formulation.html">Origin of the finite element formulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theory/fluid_dynamics/stabilization.html">On the need for stabilization</a></li>
@@ -267,6 +279,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../theory/unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM coupling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on how to use GMSH</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../publications.html">Publications</a></li>
@@ -306,6 +322,7 @@
    set void fraction time derivative = false
    set interpolated void fraction = true
    set drag force = true
+   set saffman lift force = false
    set buoyancy force = true
    set shear force = true
    set pressure force = true
@@ -323,8 +340,14 @@ end
 <li><p>The <code class="docutils literal notranslate"><span class="pre">grad</span> <span class="pre">div</span></code> parameter allows the enabling of the grad div stabilization for the Volume Averaged Navier Stokes equations <a class="reference external" href="https://doi.org/10.1016/j.softx.2020.100579">[1]</a>. This allows for a much better mass conservation of the system.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">fraction</span> <span class="pre">time</span> <span class="pre">derivative</span></code> parameter allows us to choose whether or not we want to account for the time derivative of the void fraction or take it equal to zero.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">interpolated</span> <span class="pre">void</span> <span class="pre">fraction</span></code> parameter allows us choose whether the void fraction used to calculate drag is the cell void fraction or the one interpolated at the position of the particle (Using the cell void fraction to calculate drag on each particle instead of the interpolated one is currently under investigation).</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">force</span></code>, <code class="docutils literal notranslate"><span class="pre">buoyancy</span> <span class="pre">force</span></code>, <code class="docutils literal notranslate"><span class="pre">shear</span> <span class="pre">force</span></code>, and <code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">force</span></code> parameters allow us to enable or disable the respective forces in a cfd-dem simulation.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">model</span></code> parameter allows one to choose the type of drag model to be implemented for the calculation of the drag force between the particles and the fluids. Available drag models at the time of writing are: Di Felice <a class="reference external" href="https://doi.org/10.1016/0301-9322(94)90011-6">[2]</a>, Rong <a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.036">[3]</a>, Dallavalle <a class="reference external" href="https://doi.org/10.1080/07373937.2010.482714">[4]</a>, Koch and Hill <a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.014">[5]</a>, Beetstra <a class="reference external" href="https://doi.org/10.1002/aic.11065">[6]</a>, and Gidaspow <a class="reference external" href="https://books.google.ca/books?id=fHecceQyaYkC&amp;lpg=PP1&amp;ots=uhExYvWrkv&amp;lr&amp;hl=pt-BR&amp;pg=PP1#v=onepage&amp;q&amp;f=false">[7]</a>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">force</span></code>, <code class="docutils literal notranslate"><span class="pre">saffman</span> <span class="pre">lift</span> <span class="pre">force</span></code>, <code class="docutils literal notranslate"><span class="pre">buoyancy</span> <span class="pre">force</span></code>, <code class="docutils literal notranslate"><span class="pre">shear</span> <span class="pre">force</span></code>, and <code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">force</span></code> parameters allow us to enable or disable the respective forces in a cfd-dem simulation.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By setting <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">saffman</span> <span class="pre">lift</span> <span class="pre">force</span> <span class="pre">=</span> <span class="pre">true</span></code>, the applied Saffman lift force model is the often called Saffman-Mei model, developed by Mei (1992) <a class="reference external" href="https://doi.org/10.1016/0301-9322(92)90012-6">[2]</a> as an extension of the work by Saffman (1968) <a class="reference external" href="https://doi.org/10.1017/S0022112065000824">[3]</a>. A complete description of the model is provided by Crowe et al. (2010) <a class="reference external" href="https://doi.org/10.1201/b11103">[4]</a>.</p>
+</div>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">drag</span> <span class="pre">model</span></code> parameter allows one to choose the type of drag model to be implemented for the calculation of the drag force between the particles and the fluids. Available drag models at the time of writing are: Di Felice <a class="reference external" href="https://doi.org/10.1016/0301-9322(94)90011-6">[5]</a>, Rong <a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.036">[6]</a>, Dallavalle <a class="reference external" href="https://doi.org/10.1080/07373937.2010.482714">[7]</a>, Koch and Hill <a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.014">[8]</a>, Beetstra <a class="reference external" href="https://doi.org/10.1002/aic.11065">[9]</a>, and Gidaspow <a class="reference external" href="https://books.google.ca/books?id=fHecceQyaYkC&amp;lpg=PP1&amp;ots=uhExYvWrkv&amp;lr&amp;hl=pt-BR&amp;pg=PP1#v=onepage&amp;q&amp;f=false">[10]</a>.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">post</span> <span class="pre">processing</span></code> parameter, when enabled, allows the calculation of the pressure drop, void fraction in the packed region, and the mass conservation in a packed bed at each time step.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">coupling</span> <span class="pre">frequency</span></code> parameter is only applicable for the cfd-dem solver and it determines the number of DEM iterations per 1 CFD iteration.</p></li>
 </ul>
@@ -340,12 +363,15 @@ end
 <li><p>The grad-div length scale determines the value of the length scale constant <span class="math notranslate nohighlight">\(c^*\)</span> in the calculation of <span class="math notranslate nohighlight">\(\gamma = \nu + c^* \mathbf{u}\)</span>.</p></li>
 </ul>
 <p><a class="reference external" href="https://doi.org/10.1016/j.softx.2020.100579">[1]</a> B. Blais, L. Barbeau, V. Bibeau, S. Gauvin, T. E. Geitani, S. Golshan, R. Kamble, G. Mirakhori, J. Chaouki, Lethe: An open-source parallel high- order adaptative cfd solver for incompressible flows, SoftwareX 12 (2020) 100579.</p>
-<p><a class="reference external" href="https://doi.org/10.1016/0301-9322(94)90011-6">[2]</a> R. Di Felice, The voidage function for fluid-particle interaction systems, International journal of multiphase flow 20 (1) (1994) 153–159.</p>
-<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.036">[3]</a> L. Rong, K. Dong, A. Yu, Lattice-boltzmann simulation of fluid flow through packed beds of uniform spheres: Effect of porosity, Chemical engineering science 99 (2013) 44–58.</p>
-<p><a class="reference external" href="https://doi.org/10.1080/07373937.2010.482714">[4]</a> Sobieski, Wojciech. (2011). Drag Coefficient in Solid–Fluid System Modeling with the Eulerian Multiphase Model. Drying Technology. 29. 111-125. 10.1080/07373937.2010.482714.</p>
-<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.014">[5]</a>  D. Jajcevic, E. Siegmann, C. Radeke, J. G. Khinast, Large-scale cfd–dem simulations of fluidized granular systems, Chemical Engineering Science 98 (2013) 298–310.</p>
-<p><a class="reference external" href="https://doi.org/10.1002/aic.11065">[6]</a> R. Beetstra, M. A. van der Hoef, J. A. M. Kuipers. Drag Force of Intermediate Reynolds Number Flow Past Mono- and Bidisperse Arrays of Spheres. AIChE journal, v. 53, n. 2, p. 489-501, 2007.</p>
-<p><a class="reference external" href="https://books.google.ca/books?id=fHecceQyaYkC&amp;lpg=PP1&amp;ots=uhExYvWrkv&amp;lr&amp;hl=pt-BR&amp;pg=PP1#v=onepage&amp;q&amp;f=false">[7]</a> D. Gidaspow. Multiphase flow and fluidization: continuum and kinetic theory descriptions. Academic press, 1994.</p>
+<p><a class="reference external" href="https://doi.org/10.1016/0301-9322(92)90012-6">[2]</a> Mei, Renwei. An approximate expression for the shear lift force on a spherical particle at finite Reynolds number. International Journal of Multiphase Flow, v. 18, n. 1, p. 145-147, 1992.</p>
+<p><a class="reference external" href="https://doi.org/10.1017/S0022112065000824">[3]</a> SAFFMAN, Philip Geoffrey. The lift on a small sphere in a slow shear flow. Journal of fluid mechanics, v. 22, n. 2, p. 385-400, 1965.</p>
+<p><a class="reference external" href="https://doi.org/10.1201/b11103">[4]</a> Crowe, C.T., Schwarzkopf, J.D., Sommerfeld, M., &amp; Tsuji, Y. (2011). Multiphase Flows with Droplets and Particles (2nd ed.). CRC Pres.</p>
+<p><a class="reference external" href="https://doi.org/10.1016/0301-9322(94)90011-6">[5]</a> R. Di Felice, The voidage function for fluid-particle interaction systems, International journal of multiphase flow 20 (1) (1994) 153–159.</p>
+<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.036">[6]</a> L. Rong, K. Dong, A. Yu, Lattice-boltzmann simulation of fluid flow through packed beds of uniform spheres: Effect of porosity, Chemical engineering science 99 (2013) 44–58.</p>
+<p><a class="reference external" href="https://doi.org/10.1080/07373937.2010.482714">[7]</a> Sobieski, Wojciech. (2011). Drag Coefficient in Solid–Fluid System Modeling with the Eulerian Multiphase Model. Drying Technology. 29. 111-125. 10.1080/07373937.2010.482714.</p>
+<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2013.05.014">[8]</a>  D. Jajcevic, E. Siegmann, C. Radeke, J. G. Khinast, Large-scale cfd–dem simulations of fluidized granular systems, Chemical Engineering Science 98 (2013) 298–310.</p>
+<p><a class="reference external" href="https://doi.org/10.1002/aic.11065">[9]</a> R. Beetstra, M. A. van der Hoef, J. A. M. Kuipers. Drag Force of Intermediate Reynolds Number Flow Past Mono- and Bidisperse Arrays of Spheres. AIChE journal, v. 53, n. 2, p. 489-501, 2007.</p>
+<p><a class="reference external" href="https://books.google.ca/books?id=fHecceQyaYkC&amp;lpg=PP1&amp;ots=uhExYvWrkv&amp;lr&amp;hl=pt-BR&amp;pg=PP1#v=onepage&amp;q&amp;f=false">[10]</a> D. Gidaspow. Multiphase flow and fluidization: continuum and kinetic theory descriptions. Academic press, 1994.</p>
 </section>
 
         </article>
