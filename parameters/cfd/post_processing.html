@@ -3,12 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Timer" href="timer.html" /><link rel="prev" title="Force and torque calculation" href="force_and_torque.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Restart" href="restart.html" /><link rel="prev" title="Physical Properties" href="physical_properties.html" />
 
     <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
         <title>Post-Processing - Lethe documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
     
     
@@ -167,56 +168,58 @@
 <li class="toctree-l1"><a class="reference internal" href="../../first_simulation.html">Launching your first simulation</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../parameters.html">Parameters guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="cfd.html">General, CFD and Multiphysics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="simulation_control.html">Simulation Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analytical_solution.html">Analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary_conditions_cfd.html">Boundary conditions - CFD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box refinement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dimensionality.html">Dimensionality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic flow control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fem.html">Finite element interpolation (FEM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="force_and_torque.html">Force and torque calculation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="initial_conditions.html">Initial Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="laser_heat_source.html">Laser heat source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linear_solver_control.html">Linear Solver Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mesh_adaptation_control.html">Mesh Adaptation Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fem.html">Finite element interpolation (FEM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="boundary_conditions_cfd.html">Boundary conditions - CFD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="source_term.html">Source term</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analytical_solution.html">Analytical solution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="force_and_torque.html">Force and torque calculation</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Post-Processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="non-linear_solver_control.html">Non-linear Solver Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="linear_solver_control.html">Linear Solver Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="multiphysics.html">Multiphysics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Multiphase Flow - Volume of Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="boundary_conditions_multiphysics.html">Boundary Contitions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nitsche.html">Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="non-linear_solver_control.html">Non-linear Solver Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Post-Processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="restart.html">Restart</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamic_flow_control.html">Dynamic flow control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="laser_heat_source.html">Laser heat source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="box_refinement.html">Box refinement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="source_term.html">Source term</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stabilization.html">Stabilization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="velocity_source.html">Velocity Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../dem/simulation_control.html">Simulation Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/timer.html">Timer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/test.html">Test</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/model_parameters.html">Model Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/insertion_info.html">Insertion Info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/floating_wall.html">Floating Wall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../dem/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dem/boundary_conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/floating_wall.html">Floating Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/insertion_info.html">Insertion Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/mesh.html">Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/model_parameters.html">Model Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/post-processing.html">Post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/test.html">Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dem/timer.html">Timer</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../unresolved_cfd-dem/void_fraction.html">Void Fraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../unresolved_cfd-dem/cfd_dem.html">CFD-DEM</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/cfd-dem.html">CFD-DEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../unresolved-cfd-dem/void-fraction.html">Void Fraction</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../resolved_cfd-dem/resolved_cfd-dem.html">Resolved CFD-DEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharp-immersed-boundary-solver/sharp-immersed-boundary-solver.html">Sharp-Immersed-Boundary-Solver</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rpt/rpt_parameters.html">RPT parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../rpt/detector_parameters.html">Detector parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rpt/parameter_tuning.html">Parameter tuning</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../rpt/fem_reconstruction.html">FEM Reconstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rpt/parameter_tuning.html">Parameter tuning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rpt/rpt_parameters.html">RPT parameters</a></li>
 </ul>
 </li>
 </ul>
@@ -232,54 +235,78 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">7. 3D Flow around a sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">8. 3D Flow over periodic hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">9. 2D Taylor-Couette flow using Nitsche immersed boundary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d_mixer_using_single_rotating_frame/3d_mixer_using_single_rotating_frame.html">10. 3D Ribbon Mixer using a Single Rotating Reference Frame</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d_nitsche_mixer_with_pbt_impeller/nitsche_mixer_with_pbt_impeller.html">11. 3D Mixer with Pitched-Blade Turbine Impeller using Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">10. 3D Ribbon mixer using a single rotating reference frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">11. 3D Mixer with pitched-blade turbine impeller using Nitsche immersed boundary</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/multiphysics/multiphysics.html">Multiphysics Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.html">1. Tracer through CAD Junction in Simplex</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">2. Rayleigh-Bénard Convection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">3. Rayleigh-Taylor Instability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/stefan_problem/stefan_problem.html">4. Stefan problem : melting of a solid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">5. Warming Up a Viscous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/dam-break-VOF/dam-break-VOF.html">6. Dam break VOF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/rising-bubble-VOF/rising-bubble-VOF.html">7. Rising bubble VOF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/melting-cavity/melting-cavity.html">8. Melting Cavity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/laser-heating/laser-heating.html">9. Laser heating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/multiphysics/laser-meltpool/laser-meltpool.html">10. Laser meltpool</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/vof.html">1. VOF</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/dam-break/dam-break.html">1.1. Dam-break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">1.2. Rayleigh-Taylor instability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rising-bubble/rising-bubble.html">1.3. Rising bubble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/3d-dam-break/3d-dam-break.html">1.4. 3D Dam Break With an Obstacle</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/dem/dem.html">Discrete Element Method</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/packing-in-circle/packing-in-circle.html">1. Packing in Circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/packing-in-ball/packing-in-ball.html">2. Packing in Ball</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum/rotating-drum.html">3. Rotating Drum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum-with-post-processing/rotating-drum-with-post-processing.html">4. Rotating Drum with Post-Processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotation-of-box/rotation-of-box.html">5. Rotation of Box</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">6. Silo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/3d-small-scale-rotating-drum/3d-small-scale-rotating-drum.html">7. Small Scale Rotating Drum (3D)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-mixer/granular-mixer.html">8. Granular Mixer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/heat-transfer.html">2. Heat transfer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">2.1. Rayleigh-Bénard Convection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/stefan-problem/stefan-problem.html">2.2. Stefan problem : melting of a solid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">2.3. Warming Up a Viscous Fluid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/melting-cavity/melting-cavity.html">2.4. Melting Cavity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/laser-heating/laser-heating.html">2.5. Laser heating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/laser-meltpool/laser-meltpool.html">2.6. Laser meltpool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html">2.7. Concentric heat exchanger</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved_cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">1. Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved_cfd-dem/square-fluidized-bed/square-fluidized-bed.html">2. Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/multiphysics/tracer.html">3. Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.html">3.1. Tracer through CAD Junction in Simplex</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/resolved_cfd-dem/resolved_cfd-dem.html">Resolved CFD-DEM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/resolved_cfd-dem/cylinder-with-sharp-interface/cylinder-with-sharp-interface.html">1. Flow around a cylinder using the sharp interface method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/resolved_cfd-dem/sedimentation-1-particle/sedimentation-1-particle.html">2. Sedimentation of one particle.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/resolved_cfd-dem/sphere-carreau-with-sharp-interface/sphere-carreau-with-sharp-interface.html">3. Non-Newtonian flow past a sphere</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../examples/rpt/photon-count-calculation-in-a-cylindrical-vessel/photon-count-calculation-in-a-cylindrical-vessel.html">1. Photon Count Calculation in a Cylindrical Vessel</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/dem/dem.html">Discrete Element Method</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/packing-in-circle/packing-in-circle.html">1. Packing in circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/packing-in-ball/packing-in-ball.html">2. Packing in ball</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/small-scale-rotating-drum/small-scale-rotating-drum.html">3. Small scale rotating drum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/small-scale-rotating-drum-post-processing/small-scale-rotating-drum-post-processing.html">4. Small scale rotating drum post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum/rotating-drum.html">5. Rotating drum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotating-drum-with-post-processing/rotating-drum-with-post-processing.html">6. Rotating drum with post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rotation-of-box/rotation-of-box.html">7. Rotation of box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/silo/silo.html">8. Silo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/rectangular-hopper/rectangular-hopper.html">9. Rectangular hopper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-dam-break/granular-dam-break.html">10. Granular dam-break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/dem/granular-mixer/granular-mixer.html">11. Granular mixer</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">1. Cylindrical packed bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">2. Gas-solid fluidized bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/gas-solid-spouted-bed/gas-solid-spouted-bed.html">3. Gas-solid spouted bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/unresolved-cfd-dem/boycott-effect/boycott-effect.html">4. Boycott Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/sharp-immersed-boundary-solver.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/resolved-cfd-dem.html">1. Resolved CFD-DEM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/sedimentation-1-particle/sedimentation-1-particle.html">1.1. Sedimentation of one particle</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/incompressible-flow.html">2. Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/cylinder-with-sharp-interface/cylinder-with-sharp-interface.html">2.1. Flow around a cylinder using the sharp interface method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/sphere-carreau-with-sharp-interface/sphere-carreau-with-sharp-interface.html">2.2. Non-Newtonian flow past a sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/3d-composite-mixer-with-pbt-impeller/3d-composite-mixer-with-pbt-impeller.html">2.3. 3D Mixer with pitched-blade turbine impeller using Composite Sharp-immersed boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/sharp-immersed-boundary-solver/3d-opencascade-mixer-with-pbt-impeller/3d-opencascade-mixer-with-pbt-impeller.html">2.4. 3D Mixer with pitched-blade turbine impeller using OpenCascade Sharp-immersed boundary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../examples/rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/rpt/photon-count-calculation-in-a-cylindrical-vessel/photon-count-calculation-in-a-cylindrical-vessel.html">1. Photon count calculation in a cylindrical vessel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/rpt/tuning-parameters-with-nomad/tuning-parameters-with-nomad.html">2. Tuning Count Calculation Model Parameters with NOMAD</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../theory/theory.html">Theory</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/fluid_dynamics/fluid_dynamics.html">Fluid dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../theory/theory.html">Theory</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../theory/fluid_dynamics/fluid_dynamics.html">Fluid dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../theory/fluid_dynamics/navier-stokes.html">The Incompressible Navier-Stokes equations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theory/fluid_dynamics/fem_formulation.html">Origin of the finite element formulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../theory/fluid_dynamics/stabilization.html">On the need for stabilization</a></li>
@@ -291,8 +318,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../theory/unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM coupling</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/gmsh/gmsh.html">Introduction on how to use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tools/automatic_launch/automatic_launch.html">How to automatically create and launch Lethe simulations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../publications.html">Publications</a></li>
@@ -328,44 +356,216 @@
 <h1>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h1>
 <p>This subsection controls the post-processing other than the forces and torque on the boundary conditions. Default values are</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection post-processing
-set calculate enstrophy           = false
-set calculate kinetic energy      = false
-set calculate apparent viscosity  = false
-set calculate pressure drop       = false
-set calculate average velocities  = false
-set calculate tracer statistics   = false
-set initial time                  = 0.0
-set inlet boundary id           = 0
-set outlet boundary id          = 1
-set enstrophy name              = enstrophy
-set kinetic energy name         = kinetic_energy
-set apparent viscosity name     = apparent_viscosity
-set pressure drop name          = pressure_drop
-set tracer statistics name      = tracer_statistics
-set verbosity                   = quiet
-set calculation frequency       = 1
-set output frequency            = 1
+
+  set verbosity                   = quiet
+  set output frequency            = 1
+
+  #---------------------------------------------------
+  # Fluid dynamic post-processing
+  #---------------------------------------------------
+  # Kinetic energy calculation
+  set calculate kinetic energy    = false
+  set kinetic energy name         = kinetic_energy
+
+  # Average velocities calculation
+  set calculate average velocities  = false
+  set initial time                  = 0.0
+
+  # Pressure drop calculation
+  set calculate pressure drop     = false
+  set pressure drop name          = pressure_drop
+  set inlet boundary id           = 0
+  set outlet boundary id          = 1
+
+  # Flow rate at boundaries calculation
+  set calculate flow rate         = false
+  set flow rate name              = flow_rate
+
+  # Enstrophy calculation
+  set calculate enstrophy         = false
+  set enstrophy name              = enstrophy
+
+  # Others
+  set smoothed output fields    = false
+
+  #---------------------------------------------------
+  # Physical properties post-processing
+  #---------------------------------------------------
+  set calculate apparent viscosity  = false
+  set apparent viscosity name       = apparent_viscosity
+
+  #---------------------------------------------------
+  # Multiphysics post-processing
+  #---------------------------------------------------
+  # Tracer statistics
+  set calculate tracer statistics   = false
+  set tracer statistics name        = tracer_statistics
+
+  # Thermal postprocesses
+  set postprocessed fluid              = both
+  set calculate temperature statistics = false
+  set temperature statistics name      = temperature_statistics
+  set calculate heat flux              = false
+  set heat flux name                   = heat_flux
+
+  # VOF postprocessing
+  set calculate VOF barycenter         = false
+  set VOF barycenter name              = vof_barycenter_information
+
 end
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">enstrophy</span></code> parameter enables calculation of total enstrophy.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">kinetic</span> <span class="pre">energy</span></code> parameter enables calculation of total kinetic energy.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">apparent</span> <span class="pre">viscosity</span></code> parameter enables calculation of an apparent viscosity when using a non Newtonian flow. This is mainly used to define  Reynolds number a posteriori.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">pressure</span> <span class="pre">drop</span></code> parameter enables calculation of the pressure drop from the inlet boundary to the outlet boundary.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">average</span> <span class="pre">velocities</span></code> parameter enables calculation of time-averaged velocities.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">tracer</span> <span class="pre">statistics</span></code> parameter enables calculation of tracer statistics.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">time</span></code> parameter sets the initial time to start calculations of time-averaged velocities.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">inlet</span> <span class="pre">boundary</span> <span class="pre">id</span></code> parameter sets the inlet boundary id for pressure drop calculations.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">outlet</span> <span class="pre">boundary</span> <span class="pre">id</span></code> parameter sets the outlet boundary id for pressure drop calculations.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">enstrophy</span> <span class="pre">name</span></code> parameter sets output file name for enstrophy calculations.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">kinetic</span> <span class="pre">energy</span> <span class="pre">name</span></code> parameter sets output file name for kinetic energy calculations.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">apparent</span> <span class="pre">viscosity</span> <span class="pre">name</span></code> parameter sets output file name for apparent viscosity calculations.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">drop</span> <span class="pre">name</span></code> parameter sets output file name for pressure drop calculations.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">tracer</span> <span class="pre">statistics</span> <span class="pre">name</span></code> parameter sets output file name for tracer statistics calculations.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">verbosity</span></code> parameter specifies if the post-processing values are printed to the terminal at the end of every &lt;output frequency&gt; iteration. This does not affect the printing of output files.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">calculation</span> <span class="pre">frequency</span></code> parameter sets the frequency at which the enstrophy, kinetic energy, apparent viscosity, pressure drop, average velocities and tracer statistics are calculated (for the ones that are set to <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">frequency</span></code> parameter sets the frequency at which the enstrophy, kinetic energy, apparent viscosity, pressure drop and tracer statistics are output to their respective files (for the ones that are set to <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verbosity</span></code>: enables the display of the post-processing values in the terminal. This does not affect the printing of output files. Choices are: <code class="docutils literal notranslate"><span class="pre">quiet</span></code> (default, no output) or <code class="docutils literal notranslate"><span class="pre">verbose</span></code> (output at every iteration).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">frequency</span></code>: frequency at which the enabled post-processing is outputted in the respective file. For <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">frequency</span> <span class="pre">=</span> <span class="pre">1</span></code> (default value), results are outputted at each iteration.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">kinetic</span> <span class="pre">energy</span></code>: controls if calculation of total kinetic energy is enabled.</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinetic</span> <span class="pre">energy</span> <span class="pre">name</span></code>: output filename for kinetic energy calculations.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">average</span> <span class="pre">velocities</span></code>: controls if calculation of time-averaged velocities is enabled.</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">time</span></code>: initial time used for the average velocities calculations.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">pressure</span> <span class="pre">drop</span></code>: controls if calculation of the pressure drop from the inlet boundary to the outlet boundary is enabled.</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">inlet</span> <span class="pre">boundary</span> <span class="pre">id</span></code> and <code class="docutils literal notranslate"><span class="pre">outlet</span> <span class="pre">boundary</span> <span class="pre">id</span></code>: define the IDs for inlet and outlet boundaries, respectively.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pressure</span> <span class="pre">drop</span> <span class="pre">name</span></code>: output filename for pressure drop calculations.</p></li>
+<li><p>The pressure drop <span class="math notranslate nohighlight">\(\Delta P\)</span> and total pressure drop <span class="math notranslate nohighlight">\(\Delta P_\text{total}\)</span> are calculated as such, with <span class="math notranslate nohighlight">\(\Gamma\)</span> representing the boundary, <span class="math notranslate nohighlight">\(\pmb{u}\)</span> the velocity  and <span class="math notranslate nohighlight">\(P\)</span> the pressure:</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\Delta P =  \frac{ \int_{\Gamma_\text{inlet}} P d \Gamma}{\int_{\Gamma_\text{inlet}} 1 d \Gamma} - \frac{ \int_{\Gamma_\text{outlet}} P d \Gamma}{\int_{\Gamma_\text{outlet}} 1 d \Gamma}\]</div></div>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\Delta P_\text{total} =  \frac{ \int_{\Gamma_\text{inlet}} (P + \frac{1}{2} \pmb{u} \cdot \pmb{u}) d \Gamma}{\int_{\Gamma_\text{inlet}} d \Gamma} - \frac{ \int_{\Gamma_\text{outlet}} (P + \frac{1}{2} \pmb{u} \cdot \pmb{u}) d \Gamma}{\int_{\Gamma_\text{outlet}} d \Gamma}\]</div></div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">flow</span> <span class="pre">rate</span></code>: controls if calculation of the volumetric flow rates at every boundary is enabled.</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">flow</span> <span class="pre">rate</span> <span class="pre">name</span></code>: output filename for flow rate calculations.</p></li>
+<li><p>The flow rate <span class="math notranslate nohighlight">\(Q\)</span> is calculated as such, with <span class="math notranslate nohighlight">\(\Gamma\)</span> representing the boundary, <span class="math notranslate nohighlight">\(\pmb{u}\)</span> the velocity and <span class="math notranslate nohighlight">\(\pmb{n}\)</span> the vector normal to the surface:</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[Q =  \int_{\Gamma} \pmb{n} \cdot \pmb{u} d \Gamma\]</div></div>
+<ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">enstrophy</span></code>: controls if calculation of total enstrophy, which corresponds to dissipation effects in the fluid, is enabled.</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enstrophy</span> <span class="pre">name</span></code>: output filename for enstrophy calculations.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smoothed</span> <span class="pre">output</span> <span class="pre">fields</span></code>: controls if the Qcriterion field will be smoothed using an L2-projection over the nodes. The same will shortly be applied to the Vorticity.</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">apparent</span> <span class="pre">viscosity</span></code>: controls if parameter calculation of an apparent viscosity is enabled, when using a non Newtonian flow (see section Physical properties - <a class="reference internal" href="physical_properties.html#rheological-models"><span class="std std-ref">Rheological models</span></a>). This is mainly used to define the Reynolds number <cite>a posteriori</cite>.</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">apparent</span> <span class="pre">viscosity</span> <span class="pre">name</span></code>: output filename for apparent viscosity calculations.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">tracer</span> <span class="pre">statistics</span></code>: controls if calculation of tracer statistics is enabled. Statistics include: minimum, maximum, average and standard-deviation.</dt><dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not forget to <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">tracer</span> <span class="pre">=</span> <span class="pre">true</span></code> in the <a class="reference internal" href="multiphysics.html"><span class="doc">Multiphysics</span></a> subsection of the <code class="docutils literal notranslate"><span class="pre">.prm</span></code>.</p>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tracer</span> <span class="pre">statistics</span> <span class="pre">name</span></code>: output filename for tracer statistics calculations.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">postprocessed</span> <span class="pre">fluid</span></code>: fluid domain used for thermal postprocesses. Choices are<span class="classifier"><code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">both</span></code> (default).</span></dt><dd><ul class="simple">
+<li><p>For monophasic simulations (<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">VOF</span> <span class="pre">=</span> <span class="pre">false</span></code> in <a class="reference internal" href="multiphysics.html"><span class="doc">Multiphysics</span></a>), <code class="docutils literal notranslate"><span class="pre">both</span></code> and <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code> are equivalent and the temperature statistics are computed over the entire domain.</p></li>
+<li><p>For multiphasic simulations (<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">VOF</span> <span class="pre">=</span> <span class="pre">true</span></code> in <a class="reference internal" href="multiphysics.html"><span class="doc">Multiphysics</span></a>), temperature statistics can be computed over the entire domain (<code class="docutils literal notranslate"><span class="pre">both</span></code>) or inside a given fluid only (<code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">fluid</span> <span class="pre">1</span></code>), with the fluid IDs defined in Physical properties - <a class="reference internal" href="physical_properties.html#two-phase-simulations"><span class="std std-ref">Two phase simulations</span></a>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The output files will have a suffix depending on the <code class="docutils literal notranslate"><span class="pre">postprocessed</span> <span class="pre">fluid</span></code>: <code class="docutils literal notranslate"><span class="pre">fluid_0</span></code>, <code class="docutils literal notranslate"><span class="pre">fluid_1</span></code> and <code class="docutils literal notranslate"><span class="pre">all_domain</span></code>.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">temperature</span> <span class="pre">statistics</span></code>: controls if calculation of temperature statistics is enabled. Statistics include: minimum, maximum, average and standard-deviation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">temperature</span> <span class="pre">statistics</span> <span class="pre">name</span></code>: output filename for temperature statistics calculations.</p></li>
+</ul>
+<div class="admonition-example-of-temperature-statistics-table admonition">
+<p class="admonition-title">Example of temperature statistics table:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> time  min    max    average std-dev
+0.0000 0.0000 3.9434  0.1515  0.6943
+0.2000 2.5183 4.9390  3.3917  0.7229
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">heat</span> <span class="pre">flux</span></code>: controls if calculation of heat flux is enabled. If enabled, these quantities are postprocessed:</p>
+<ol class="arabic simple">
+<li><p>the total heat flux <span class="math notranslate nohighlight">\(q_{tot}\)</span> for each <a class="reference internal" href="boundary_conditions_multiphysics.html#heat-transfer-bc"><span class="std std-ref">Heat Transfer</span></a> boundary condition. The total heat flux on a boundary <span class="math notranslate nohighlight">\(\Gamma\)</span> is defined as:</p></li>
+</ol>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[q_\text{tot} = \int_\Gamma (\rho C_p \mathbf{u} \mathbf{T} - k \nabla \mathbf{T}) \cdot \mathbf{n}\]</div></div>
+<p>The output table is appended with one column per <a class="reference internal" href="boundary_conditions_multiphysics.html#heat-transfer-bc"><span class="std std-ref">Heat Transfer</span></a> boundary condition, named <code class="docutils literal notranslate"><span class="pre">bc_i</span></code> where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the index of the boundary in the parameter file.</p>
+<ol class="arabic simple" start="2">
+<li><p>the convective heat flux <span class="math notranslate nohighlight">\(q_\text{conv}\)</span> for each <a class="reference internal" href="boundary_conditions_multiphysics.html#heat-transfer-bc"><span class="std std-ref">Heat Transfer</span></a> boundary condition. The convective heat flux on a boundary <span class="math notranslate nohighlight">\(\Gamma\)</span> is defined as:</p></li>
+</ol>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[q_\text{conv} = \int_\Gamma  h (\mathbf{T}-\mathbf{T}_\infty)\]</div></div>
+<p>The output table is appended with one column per <a class="reference internal" href="boundary_conditions_multiphysics.html#heat-transfer-bc"><span class="std std-ref">Heat Transfer</span></a> boundary condition, named <code class="docutils literal notranslate"><span class="pre">bc_i</span></code> where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the index of the boundary in the parameter file.</p>
+<ol class="arabic simple" start="3">
+<li><p>the thermal energy (<span class="math notranslate nohighlight">\(\mathbf{Q} = m c_p \mathbf{T}\)</span>) over the domain defined by <code class="docutils literal notranslate"><span class="pre">postprocessed</span> <span class="pre">fluid</span></code>.</p></li>
+<li><p>if there is a <a class="reference internal" href="nitsche.html"><span class="doc">Nitsche Immersed Boundary</span></a>, the total heat fluxes on each solid: <span class="math notranslate nohighlight">\(q_\text{nitsche} = \beta_\text{heat} \left( \mathbf{T}_\text{nitsche} - \mathbf{T} \right)\)</span></p></li>
+</ol>
+<p>The output table is appended with one column per solid, named <code class="docutils literal notranslate"><span class="pre">nitsche_solid_i</span></code> where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the index of the <code class="docutils literal notranslate"><span class="pre">nitsche</span> <span class="pre">solid</span></code> in the parameter file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not forget to <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">enable</span> <span class="pre">heat</span> <span class="pre">boundary</span> <span class="pre">condition</span> <span class="pre">=</span> <span class="pre">true</span></code> in the <a class="reference internal" href="nitsche.html"><span class="doc">Nitsche Immersed Boundary</span></a> subsection of the <code class="docutils literal notranslate"><span class="pre">.prm</span></code>.</p>
+</div>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">heat</span> <span class="pre">flux</span> <span class="pre">name</span></code>: output filename for heat flux calculations.</p>
+<div class="admonition-example-of-heat-flux-table admonition">
+<p class="admonition-title">Example of heat flux table:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> time  total_flux_bc_0 convective_flux_bc_0 thermal_energy_fluid flux_nitsche_solid_0
+0.0000          0.0000               0.0000               0.0000            1000.0000
+1.0000         -0.9732               0.0000               1.4856               0.9732
+</pre></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calculate</span> <span class="pre">VOF</span> <span class="pre">barycenter</span></code>: calculates the barycenter of fluid 1 and its velocity VOF simulations. The barycenter <span class="math notranslate nohighlight">\(\mathbf{x}_b\)</span> and its velocity <span class="math notranslate nohighlight">\(\mathbf{v}_b\)</span> are defined as:</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\mathbf{x_b} = \frac{\int_{\Omega} \psi \mathbf{x} \mathrm{d}\Omega }{\int_{\Omega} \psi \mathrm{d}\Omega}\]</div></div>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[\mathbf{v_b} = \frac{\int_{\Omega} \psi \mathbf{u} \mathrm{d}\Omega }{\int_{\Omega} \psi \mathrm{d}\Omega}\]</div></div>
+<p>where <span class="math notranslate nohighlight">\(\psi\)</span> is the filtered phase indicator.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temperature</span> <span class="pre">statistics</span> <span class="pre">name</span></code>: output filename for temperature statistics calculations.</p>
+<blockquote>
+<div><div class="admonition-example-of-temperature-statistics-table admonition">
+<p class="admonition-title">Example of temperature statistics table:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> time  min    max    average std-dev
+0.0000 0.0000 3.9434  0.1515  0.6943
+0.2000 2.5183 4.9390  3.3917  0.7229
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
 </ul>
 </section>
 
@@ -374,23 +574,23 @@ end
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="timer.html">
+          <a class="next-page" href="restart.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Timer</div>
+                <div class="title">Restart</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="force_and_torque.html">
+          <a class="prev-page" href="physical_properties.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Force and torque calculation</div>
+                <div class="title">Physical Properties</div>
                 
               </div>
             </a>
@@ -419,5 +619,8 @@ end
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>

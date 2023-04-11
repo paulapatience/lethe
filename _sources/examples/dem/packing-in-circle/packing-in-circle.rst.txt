@@ -1,5 +1,5 @@
 ==================================
-Packing in Circle
+Packing in circle
 ==================================
 
 This is the first example of Lethe-DEM. This example introduces the concept of parameter files to parametrize Lethe simulations. It is strongly recommended to visit `DEM parameters <../../../parameters/dem/dem.html>`_ for more detailed information on the concepts and physical meaning of the parameters in Lethe-DEM.
@@ -11,15 +11,15 @@ Features
 - Displays the selection of models and physical properties
 
 
-Location of the examples
-------------------------
- ``/examples/dem/2d_packing_in_circle/packing_in_circle.prm``
+Files used in this example
+----------------------------
+``/examples/dem/2d-packing-in-circle/packing-in-circle.prm``
 
 
 Description of the case
 -----------------------
 
-Packing in circle is the most basic example in Lethe-DEM. In this example, 50 two-dimensional particles are inserted in a circle. Due to the action of gravity, they accelerate in the defined direction of the gravity. Upon reaching the outer periphery of the circle (triangulation boundary wall), the particle-wall contact stops the particles from leaving the triangulation. Finally a balance forms between the particle-particle and particle-wall contact force and the gravity force. Particles lose kinetic energy (and velocity), and get packed on the triangulation boundary and remain at rest.
+Packing in a circle is the most basic example in Lethe-DEM. In this example, 50 two-dimensional particles are inserted in a circle. Due to the action of gravity, they accelerate in the defined direction of gravity. Upon reaching the outer periphery of the circle (the boundary walls of the triangulation), the particle-wall contact stops the particles from leaving the triangulation. Finally a balance forms between the particle-particle and particle-wall contact force and the gravity force. Particles lose kinetic energy (and velocity), get packed on the triangulation boundary, and remain at rest.
 
 
 Parameter file
@@ -46,22 +46,25 @@ The ``mesh`` subsection specifies the computational grid:
 .. code-block:: text
 
     subsection mesh
-        set type                 				= dealii
-        set grid type      	     			 	= hyper_ball
-        set grid arguments       				= 0.0, 0.0 : 0.1 : false
-        set initial refinement   				= 3
+      set type                                = dealii
+      set grid type                           = hyper_ball
+      set grid arguments                      = 0.0, 0.0 : 0.1 : false
+      set initial refinement                  = 3
+      set expand particle-wall contact search = true
     end
 
 The ``type`` specifies the mesh format used. At the moment, Lethe supports two mesh formats: ``dealii`` and ``gmsh``. ``dealii`` meshes are in-situ generated meshes for simple geometries. The type of grid generated is specified by the ``grid type`` parameters and this grid is parametrized by its ``grid arguments``. We refer to the documentation of the deal.ii `GridGenerator <https://www.dealii.org/current/doxygen/deal.II/namespaceGridGenerator.html>`_ for a detailed explanation of the available grids.
 
-Since the packing-in-circle problem domain is a circle, we use the *hyper_ball* ``grid_type``. The arguments of this grid type are the position of the center, the radius of the ball (circle), and the option to colorize the boundaries in order to give each of them a unique ID. The IDs will be used to set the boundary conditions on specific parts of the boundary of the domain. The ``colorize`` option is set to false and all boundaries would have been given the ID ``0``. This will constitute the walls of the domain.
+Since the domain of the packing-in-circle problem is a circle, we use the *hyper_ball* as ``grid_type``. The ``grid arguments`` of this ``grid_type`` determine the position of the center, the radius of the ball (circle), and whether the colorize option is going to be used (``true``) or not (``false``). By setting the latter argument to ``true``, each of the boundaries will receive a unique ID. The IDs will be used to set the boundary conditions on specific parts of the boundary of the domain. If the ``colorize`` option is set to ``false``, all boundaries would have been given the ID ``0``. This will constitute the walls of the domain.
+
+The ``expand particle-wall contact search`` parameter is an advanced feature of Lethe-DEM that expands the particle-wall contact detection list by including the walls of the neighboring cells.  This feature is necessary when the geometry is concave and presents curvature, as is the case of the circle in which the simulation is carried out.
 
 
 .. note:: 
 	Since the simulation is two-dimensional, we have a circle instead of a ball for the triangulation.
 
 
-The last parameter specifies the ``initial refinement`` of the grid. Most deal.ii grid generators contain a minimal number of cells. Indicating an ``initial refinement=3`` implies that the initial mesh is refined 3 times. In 2D, each cell is divided by 4 per refinement.
+The last parameter is the ``initial refinement`` of the grid. Most deal.ii grid generators contain a minimal number of cells. Indicating an ``initial refinement=3`` implies that the initial mesh is refined 3 times. Each refinement corresponds to dividing the cell element into two for each dimension, i.e, in 2D, each cell is divided into 4 per refinement.
 
 
 .. note:: 
@@ -76,16 +79,16 @@ The ``insertion info`` subsection manages the insertion of particles.
 .. code-block:: text
 
     subsection insertion info
-        set insertion method								= non_uniform
-        set inserted number of particles at each time step  = 50
-        set insertion frequency            		 			= 1000000
-        set insertion box minimum x            	 			= -0.05
-        set insertion box minimum y            	         	= 0
-        set insertion box maximum x            	         	= 0.05
-        set insertion box maximum y           	 		 	= 0.07
-        set insertion distance threshold					= 2
-        set insertion random number range					= 0.75
-        set insertion random number seed					= 19
+      set insertion method                               = non_uniform
+      set inserted number of particles at each time step = 50
+      set insertion frequency                            = 1000000
+      set insertion box minimum x                        = -0.05
+      set insertion box minimum y                        = 0
+      set insertion box maximum x                        = 0.05
+      set insertion box maximum y                        = 0.07
+      set insertion distance threshold                   = 2
+      set insertion random number range                  = 0.75
+      set insertion random number seed                   = 19
     end
 
 First, the ``insertion method`` is selected. There are two insertion methods (``uniform`` and ``non_uniform``) in Lethe-DEM. In ``uniform`` insertion, the particles are inserted uniformly (without randomness in their initial location), while in ``non_uniform``, particles are inserted randomly in the insertion box. ``inserted number of particles at each time step`` specifies the desired number of particles to be inserted at each insertion step.
@@ -107,33 +110,31 @@ First, the ``insertion method`` is selected. There are two insertion methods (``
 Lagrangian physical properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The gravitational acceleration as well as the physical properties of particles and walls are specified in the ``Lagrangian physical properties`` subsection. These properties include diameter and density of particles, Young's modulus, Poisson's ratio, restitution coefficient, friction and rolling friction coefficients.
+The gravitational acceleration as well as the physical properties of particles and walls are specified in the ``Lagrangian physical properties`` subsection. These properties include diameter and density of particles, Young's modulus, Poisson's ratio, restitution coefficient and friction coefficients.
 
 .. code-block:: text
 
     subsection lagrangian physical properties
-        set gx            		 					  	= 0.0
-        set gy            		 					  	= -9.81
-        set number of particle types	               	= 1
-            subsection particle type 0
-            set size distribution type				   	= uniform
-                set diameter            	 			= 0.005
-            	set number								= 150
-                set density particles  	 			 	= 2000
-                set young modulus particles        		= 100000000
-                set poisson ratio particles          	= 0.3
-                set restitution coefficient particles	= 0.9
-                set friction coefficient particles      = 0.3
-                set rolling friction particles       	= 0.1
-        end
-        set young modulus wall            			   	= 100000000
-        set poisson ratio wall            			   	= 0.3
-        set restitution coefficient wall           	  	= 0.9
-        set friction coefficient wall         		   	= 0.3
-        set rolling friction wall         	      	 	= 0.1
+      set gx                       = 0.0
+      set gy                       = -9.81
+      set number of particle types = 1
+      subsection particle type 0
+        set size distribution type            = uniform
+        set diameter                          = 0.005
+        set number                            = 150
+        set density particles                 = 2000
+        set young modulus particles           = 100000000
+        set poisson ratio particles           = 0.3
+        set restitution coefficient particles = 0.9
+        set friction coefficient particles    = 0.3
+      end
+      set young modulus wall           = 100000000
+      set poisson ratio wall           = 0.3
+      set restitution coefficient wall = 0.9
+      set friction coefficient wall    = 0.3
     end
 
-First, gravitational acceleration is defined. Since the simulation is two-dimensional, we do not define the gravity in `z` direction. The ``number of particle types`` parameter specifies the number of particle types in a simulation. Particles with different sizes, size distributions, and physical properties have to be defined as separate particle types. The ``size distribution type`` parameter specifies the size distribution for each particle type. The acceptable choices are ``uniform`` and ``normal`` distributions. Since this simulation is monodispersed, the ``size distribution type`` is ``uniform``. ``diameter`` and ``density`` of particles, ``number`` of particles of each type, ``young modulus``, ``poisson ratio``, ``restitution coefficient``, ``friction coefficient``, and ``rolling friction coefficient`` are defined.
+First, gravitational acceleration is defined. Since the simulation is two-dimensional, we do not define the gravity in `z` direction. The ``number of particle types`` parameter specifies the number of particle types in a simulation. Particles with different sizes, size distributions, and physical properties have to be defined as separate particle types. The ``size distribution type`` parameter specifies the size distribution for each particle type. The acceptable choices are ``uniform`` and ``normal`` distributions. Since this simulation is monodispersed, the ``size distribution type`` is ``uniform``. ``diameter`` and ``density`` of particles, ``number`` of particles of each type, ``young modulus``, ``poisson ratio``, ``restitution coefficient`` and ``friction coefficient`` are defined.
 
 .. note::
     The ``diameter`` parameter defines the diameter of the particles in a ``uniform`` distribution. For a ``normal`` distribution, we need to define ``average diameter`` and ``standard deviation`` parameters.
@@ -147,15 +148,16 @@ In the ``model parameters`` subsection, DEM simulation parameters are defined.
 .. code-block:: text
 
     subsection model parameters
-      set contact detection method 		   	   		= dynamic
-      set dynamic contact search size coefficient	= 0.7
-      set neighborhood threshold				 	= 1.5
-      set particle particle contact force method    = hertz_mindlin_limit_overlap
-      set particle wall contact force method        = nonlinear
-      set integration method				 		= velocity_verlet
+      set contact detection method                = dynamic
+      set dynamic contact search size coefficient = 0.7
+      set neighborhood threshold                  = 1.5
+      set particle particle contact force method  = hertz_mindlin_limit_overlap
+      set particle wall contact force method      = nonlinear
+      set integration method                      = velocity_verlet
+      set rolling resistance torque method        = constant_resistance
     end
 
-These parameters include ``contact detection method`` and its subsequent information (``dynamic contact search size coefficient`` **or** ``contact detection frequency`` for ``dynamic`` **or** ``constant`` contact detection method), ``neighborhood threshold`` (which defines the contact neighbor list size: ``neighborhood threshold`` * particle diameter), ``particle particle contact force method``, ``particle wall contact force method`` and ``integration method``. All the concepts, models and choices are explained in `DEM parameters <../../../parameters/dem/dem.html>`_.
+These parameters include ``contact detection method`` and its subsequent information (``dynamic contact search size coefficient`` **or** ``contact detection frequency`` for ``dynamic`` **or** ``constant`` contact detection method), ``neighborhood threshold`` (which defines the contact neighbor list size: ``neighborhood threshold`` * particle diameter), ``particle particle contact force method``, ``particle wall contact force method`` and ``integration method``. All the concepts, models, and choices are explained in `DEM parameters <../../../parameters/dem/dem.html>`_.
 
 By setting ``contact detection method = constant``. contact search will be carried out at constant frequency (every ``contact detection frequency`` iterations). Normally, the ``contact detection frequency`` should be a value between 5 and 50. The contact frequency should be chosen such that the particles do not travel more than half a cell between two contact detection. Small values of ``contact detection frequency`` lead to long simulation times, while large values of ``contact detection frequency`` may lead to late detection of collisions. Late detection of collisions can result in very large particles velocities (popcorn jump of particles in a simulation) or particles leaving the simulation domain.
 
@@ -179,10 +181,10 @@ The last subsection, which is generally the one we put at the top of the paramet
 .. code-block:: text
 
     subsection simulation control
-      set time step                 		= 1e-6
-      set time end       					= 3
-      set log frequency				       	= 10000
-      set output frequency            		= 10000
+      set time step        = 1e-6
+      set time end         = 3
+      set log frequency    = 10000
+      set output frequency = 10000
     end
 
 Running the simulation
@@ -191,7 +193,7 @@ Launching the simulation is as simple as specifying the executable name and the 
 
 .. code-block:: text
 
-  dem_2d packing_in_circle.prm
+  dem_2d packing-in-circle.prm
 
 Lethe will generate a number of files. The most important one bears the extension ``.pvd``. It can be read by popular visualization programs such as `Paraview <https://www.paraview.org/>`_. 
 
@@ -205,6 +207,6 @@ Results
 
 Packed particles at the end of simulation:
 
-.. image:: images/packing_in_circle.png
+.. image:: images/packing-in-circle.png
     :alt: velocity distribution
     :align: center

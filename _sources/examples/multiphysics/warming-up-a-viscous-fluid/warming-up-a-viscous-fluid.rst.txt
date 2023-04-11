@@ -12,17 +12,17 @@ Features
 * Displays the use of heat transfer physics
 * Analytical solution
 
-Location of the example
------------------------
-``examples/multiphysics/warming_up_viscous_fluid``
+Files used in this example
+---------------------------
+``examples/multiphysics/warming-up-viscous-fluid``
 
 Description of the case
 ------------------------
-A viscous fluid lays between two parallel plates: one fixed and insulated, and the other moving and heated. The velocity profile and the temperature evolution are simulated. The parameter file used is ``warming_up_viscous_fluid.prm``.
+A viscous fluid lays between two parallel plates: one fixed and insulated, and the other moving and heated. The velocity profile and the temperature evolution are simulated. The parameter file used is ``warming-up-viscous-fluid.prm``.
 
 The following schematic describes the simulation.
 
-.. image:: images/warming_scheme.png
+.. image:: images/warming-scheme.png
     :alt: Simulation schematic
     :height: 10cm
     :align: center
@@ -36,7 +36,7 @@ The following schematic describes the simulation.
 Parameter file
 ---------------
 
-Simulation Control
+Simulation control
 ~~~~~~~~~~~~~~~~~~
 
 Time integration is defined by a 2nd order backward differentiation (``bdf2``), for a 7.0 seconds simulation (``time end``) with a 0.05 second ``time step``, as stated in the subsection ``simulation control``:
@@ -47,11 +47,11 @@ Time integration is defined by a 2nd order backward differentiation (``bdf2``), 
     # Simulation Control
     #---------------------------------------------------
     subsection simulation control
-      set method                  = bdf2
-      set time step               = 0.05
-      set time end                = 7.0     
-      set output name             = warming-up
-      set output frequency        = 1       
+      set method           = bdf2
+      set time step        = 0.05
+      set time end         = 7.0
+      set output name      = warming-up
+      set output frequency = 1
     end
 
 .. note:: 
@@ -68,12 +68,12 @@ The order of resolution for the ``velocity``, ``pressure`` and ``temperature`` a
     # FEM
     #---------------------------------------------------
     subsection FEM
-      set velocity order        = 1
-      set pressure order        = 1
-      set temperature order     = 2
+      set velocity order    = 1
+      set pressure order    = 1
+      set temperature order = 2
     end
 
-Physical Properties
+Physical properties
 ~~~~~~~~~~~~~~~~~~~
 
 The fluid's ``physical properties`` are defined in the following subsection, according to the properties of oil.
@@ -86,11 +86,11 @@ The fluid's ``physical properties`` are defined in the following subsection, acc
     subsection physical properties
       subsection fluid 0
         set density              = 0.9
-        set kinematic viscosity    = 0.5
+        set kinematic viscosity  = 0.5
         set thermal conductivity = 0.12
       end
-    # water = 1 density, 0.01 viscosity, 0.59 conductivity
-    # oil = 0.9 density, 0.5 viscosity, 0.12 conductivity
+      # water = 1 density, 0.01 viscosity, 0.59 conductivity
+      # oil = 0.9 density, 0.5 viscosity, 0.12 conductivity
     end
 
 .. warning:: 
@@ -107,9 +107,9 @@ The ``mesh`` considered is a very basic rectangle, using the ``dealii`` grid typ
     # Mesh
     #---------------------------------------------------
     subsection mesh
-      set type = dealii
-      set grid type = hyper_rectangle
-      set grid arguments = 0, 0 : 0.5, 1 : true
+      set type               = dealii
+      set grid type          = hyper_rectangle
+      set grid arguments     = 0, 0 : 0.5, 1 : true
       set initial refinement = 4
     end
 
@@ -127,11 +127,11 @@ The ``multiphysics`` subsection enable to turn on (``true``) and off (``false``)
     # Multiphysics
     #---------------------------------------------------
     subsection multiphysics
-      set heat transfer = true
+      set heat transfer       = true
       set viscous dissipation = true
     end
 
-Analytical Solution
+Analytical solution
 ~~~~~~~~~~~~~~~~~~~
 
 The ``analytical solution`` is defined, according to the fluid and simulation properties:
@@ -147,18 +147,18 @@ with :math:`x` the axis perpendicular to the plates, :math:`\rho` the density, :
     # Analytical Solution
     #---------------------------------------------------
     subsection analytical solution
-      set enable                 = true
+      set enable    = true
       set verbosity = verbose
-        subsection uvwp
-                set Function expression =  0 ; 0 ; 0
-        end
-        subsection temperature
-    	  set Function constants = rho=0.9, nu=0.5, K=0.12, Tw=80, v=2, B=0.5
-              set Function expression = Tw+(((rho*nu)*v*v)/(2*K))*(1-(x/B)*(x/B))
-        end
+      subsection uvwp
+        set Function expression = 0 ; 0 ; 0
+      end
+      subsection temperature
+        set Function constants  = rho=0.9, nu=0.5, K=0.12, Tw=80, v=2, B=0.5
+        set Function expression = Tw+(((rho*nu)*v*v)/(2*K))*(1-(x/B)*(x/B))
+      end
     end
 
-Boundary Conditions
+Boundary conditions
 ~~~~~~~~~~~~~~~~~~~
 
 The ``boundary conditions`` are set for:
@@ -172,36 +172,36 @@ The ``boundary conditions`` are set for:
     # Boundary Conditions
     #---------------------------------------------------
     subsection boundary conditions
-      set number                  = 2
-        subsection bc 0
-        set id = 0
-            set type              = noslip
+      set number = 2
+      subsection bc 0
+        set id   = 0
+        set type = noslip
+      end
+      subsection bc 1
+        set id   = 1
+        set type = function
+        subsection u
+          set Function expression = 0
         end
-        subsection bc 1
-        set id = 1
-            set type              = function
-            subsection u
-                set Function expression = 0
-            end
-            subsection v
-                set Function expression = 2
-            end
+        subsection v
+          set Function expression = 2
         end
+      end
     end
 
     subsection boundary conditions heat transfer
-      set number                  = 2
-        subsection bc 0
-        set id = 0
-            set type          = convection
-    	set h             = 0
-    	set Tinf	  = 0
-        end
-        subsection bc 1
-        set id = 1
-            set type              = temperature
-    	set value             = 80
-        end
+      set number = 2
+      subsection bc 0
+        set id   = 0
+        set type = convection-radiation
+        set h    = 0
+        set Tinf = 0
+      end
+      subsection bc 1
+        set id    = 1
+        set type  = temperature
+        set value = 80
+      end
     end
 
 Running the simulation
@@ -211,7 +211,7 @@ The simulation is launched in the same folder as the ``.prm`` file, using the ``
 
 .. code-block:: sh
     
-    ../../exe/bin/gls_navier_stokes_2d warming_up_viscous_fluid.prm
+    ../../exe/bin/gls_navier_stokes_2d warming-up-viscous-fluid.prm
 
 Results
 --------------
@@ -221,32 +221,32 @@ Visualizations
 
 Convergence with regards to the analytical solution on the temperature:
 
-.. image:: images/error_analytical.png
+.. image:: images/error-analytical.png
     :alt: Convergence with regards to the analytical solution on the temperature
     :height: 10cm
     :align: center
 
 Domain with temperature:
 
-.. image:: images/domain_t0.png
+.. image:: images/domain-t0.png
     :alt: Domain with temperature (t = 0)
     :height: 10cm
 
-.. image:: images/domain_t1.png
+.. image:: images/domain-t1.png
     :alt: Domain with temperature (t = 1)
     :height: 10cm
 
-.. image:: images/domain_t2.png
+.. image:: images/domain-t2.png
     :alt: Domain with temperature (t = 2)
     :height: 10cm
 
-.. image:: images/domain_t7.png
+.. image:: images/domain-t7.png
     :alt: Domain with temperature (t = 3)
     :height: 10cm
 
 Temperature evolution over time:
 
-.. image:: images/temperature_over_time.png
+.. image:: images/temperature-over-time.png
     :alt: Temperature evolution over time
     :height: 15cm
     :align: center
@@ -255,7 +255,7 @@ Temperature evolution over time:
 Physical interpretation
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-From :math:`t=0s`` to :math:`t=2s`, the right plate (:math:`T=80^\circ`) heats up the fluid (initially at :math:`T=0^\circ`). At :math:`t=2s`, the temperature is quasi-homogeneous in the fluid, with :math:`T=80^\circ`. As the fluid continues to be forced to flow at the right wall, viscous dissipation generates more heat, so that the wall with a fixed temperature of :math:`T=80^\circ` now cools down the fluid. A steady state between viscous dissipation heating and the fixed temperature cooling is reached at about :math:`t=4.5s`.
+From :math:`t=0s` to :math:`t=2s`, the right plate (:math:`T=80^\circ`) heats up the fluid (initially at :math:`T=0^\circ`). At :math:`t=2s`, the temperature is quasi-homogeneous in the fluid, with :math:`T=80^\circ`. As the fluid continues to be forced to flow at the right wall, viscous dissipation generates more heat, so that the wall with a fixed temperature of :math:`T=80^\circ` now cools down the fluid. A steady state between viscous dissipation heating and the fixed temperature cooling is reached at about :math:`t=4.5s`.
 
 Bonuses
 --------------
@@ -271,29 +271,31 @@ For water, ``physical properties`` are:
     # Physical Properties
     #---------------------------------------------------
     subsection physical properties
-      set density              = 1
-      set kinematic viscosity    = 0.01
-      set thermal conductivity = 0.59
+      subsection fluid 0
+       set density              = 1
+       set kinematic viscosity    = 0.01
+       set thermal conductivity = 0.59
+      end
     # water = 1 density, 0.01 viscosity, 0.59 conductivity
     # oil = 0.9 density, 0.5 viscosity, 0.12 conductivity
     end
 
 As water has a higher thermal conductivity than oil, the temperature becomes quasi-homogeneous sooner (around :math:`t=1s`). And as it is far less viscous, the heat generated by viscous dissipation is not visible on the temperature-over-time plot. However it still exists, as seen when the temperature scale is adapted.
 
-.. image:: images/temperature_over_time_water.png
+.. image:: images/temperature-over-time-water.png
     :alt: Temperature evolution over time
     :height: 15cm
     :align: center
 
-.. image:: images/domain_t05_water.png
+.. image:: images/domain-t05-water.png
     :alt: Domain with temperature (t = 0.5)
     :width: 30%
 
-.. image:: images/domain_t7_water.png
+.. image:: images/domain-t7-water.png
     :alt: Domain with temperature (t = 7)
     :width: 30%
 
-.. image:: images/domain_t7_water_rescale.png
+.. image:: images/domain-t7-water-rescale.png
     :alt: Rescaled domain with temperature (t = 7)
     :width: 30%
 
@@ -305,20 +307,20 @@ The viscous dissipation can be disabled physically, if the two plates remain fix
 
 After the fluid has been heated up by the right plate, the temperature is really homogeneous throughout the domain, and both minimum and maximum temperatures stay at :math:`T_\omega=80^\circ`. Adapting the temperature scale shows that there is no viscous dissipation at all.
 
-.. image:: images/temperature_over_time_water_nodiss.png
+.. image:: images/temperature-over-time-water-nodiss.png
     :alt: Temperature evolution over time
     :height: 15cm
     :align: center
 
-.. image:: images/domain_t05_water_nodiss.png
+.. image:: images/domain-t05-water-nodiss.png
     :alt: Domain with temperature (t = 0.5)
     :width: 30%
 
-.. image:: images/domain_t7_water_nodiss.png
+.. image:: images/domain-t7-water-nodiss.png
     :alt: Domain with temperature (t = 7)
     :width: 30%
 
-.. image:: images/domain_t7_water_rescale_nodiss.png
+.. image:: images/domain-t7-water-rescale-nodiss.png
     :alt: Rescaled domain with temperature (t = 7)
     :width: 30%
 
@@ -335,38 +337,38 @@ Several adjustments have to be made in the `.prm` to turn the domain clockwise, 
 
 .. code-block:: text
 
-	subsection boundary conditions
-	  set number                  = 2
-	    subsection bc 0
-	    set id = 2
-		set type              = noslip
-	    end
-	    subsection bc 1
-	    set id = 3
-		set type              = function
-		subsection u
-		    set Function expression = 2
-		end
-		subsection v
-		    set Function expression = 0
-		end
-	    end
-	end
+    subsection boundary conditions
+      set number = 2
+      subsection bc 0
+        set id   = 2
+        set type = noslip
+      end
+      subsection bc 1
+        set id   = 3
+        set type = function
+        subsection u
+          set Function expression = 2
+        end
+        subsection v
+          set Function expression = 0
+        end
+      end
+    end
 
-	subsection boundary conditions heat transfer
-	  set number                  = 4
-	    subsection bc 2
-	    set id = 2
-		set type          = convection-radiation
-		set h             = 0
-		set Tinf	  = 0
-	    end
-	    subsection bc 3
-	    set id = 3
-		set type              = temperature
-		set value             = 80
-	    end
-	end
+    subsection boundary conditions heat transfer
+      set number = 4
+      subsection bc 2
+        set id   = 2
+        set type = convection-radiation
+        set h    = 0
+        set Tinf = 0
+      end
+      subsection bc 3
+        set id    = 3
+        set type  = temperature
+        set value = 80
+      end
+    end
 
 .. important::
 	For the fluid ``boundary conditions``, we use ``set number = 2``, whereas for ``boundary conditions heat transfer`` we use ``set number = 4``. These two notations are perfectly equivalent, as the boundary conditions are ``none`` by default (or ``noflux`` in the case of heat transfer, see :doc:`../../../parameters/cfd/boundary_conditions_multiphysics`). However, it is important to make sure that:

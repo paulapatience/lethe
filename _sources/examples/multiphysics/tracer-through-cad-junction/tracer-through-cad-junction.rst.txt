@@ -13,9 +13,9 @@ Features
 - Displays the use of the tracer physics
 - Displays the use of a simplex mesh generated with a CAD platform
 
-Location of the example
-------------------------
-``examples/multiphysics/tracer-through-cad-junction/tracer_through_cad_junction.prm``
+Files used in this example
+---------------------------
+``examples/multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.prm``
 
 Description of the case
 -----------------------
@@ -34,17 +34,17 @@ Complex geometries can be set up and meshed with the SALOME platform.
 
 First, the geometry module must be loaded as such, and geometric shapes can be added. For example, here, disks are drawn alongside sinusoidal curves that will be used for pipe generation through extrusion. The ``Fuse`` command can then be used to obtain a single geometry.
 
-.. image:: images/salome_menu.png
+.. image:: images/salome-menu.png
     :alt: Salome menu with geometry visible
     :align: center
 
-.. image:: images/salome_geometry.png
+.. image:: images/salome-geometry.png
     :alt: Geometry generated with Salome
     :align: center
 
 Second, the mesh module can be loaded to generate a ``.mesh`` file. A new mesh must be created with an associated geometry, algorithm and hypothesis. ``NETGEN 1D-2D-3D`` works well, and automatic hypothesis selection can be used. The element size can be edited to specific requirements, and then the Compute command must be used to generate the grid. Through ``File -> Export -> GMF File``, the ``.mesh`` file can be output.
 
-.. image:: images/salome_mesh_creation.png
+.. image:: images/salome-mesh-creation.png
     :alt: Contextual menu for mesh generation in Salome
     :align: center
 
@@ -60,7 +60,7 @@ In this specific case, there are four boundaries: inlets with no tracer (1), inl
 
 .. code-block:: text
 
-    Merge "Mesh_1.mesh";
+    Merge "Mesh-1.mesh";
     Physical Surface(1) = {729, 712};
     Physical Surface(2) = {10};
     Physical Surface(3) = {1:9,11:711,713:728,730:848,850,852:5000};
@@ -91,10 +91,10 @@ In the ``subsection mesh``, the simplex mode can be enabled with ``set simplex =
     # Mesh
     #---------------------------------------------------
     subsection mesh
-        set type                 = gmsh
-        set file name            = vessels.msh
-        set initial refinement   = 0
-        set simplex              = true
+      set type               = gmsh
+      set file name          = vessels.msh
+      set initial refinement = 0
+      set simplex            = true
     end
 
 .. warning:: 
@@ -114,7 +114,7 @@ Using the tracer physics requires four elements: activating the physics, setting
     # Multiphysics
     #---------------------------------------------------
     subsection multiphysics
-        set tracer = true
+      set tracer = true
     end
 
 .. code-block:: text
@@ -123,8 +123,10 @@ Using the tracer physics requires four elements: activating the physics, setting
     # Physical Properties
     #---------------------------------------------------
     subsection physical properties
-        set kinematic viscosity            = 1
-        set tracer diffusivity             = 0.001
+      subsection fluid 0
+        set kinematic viscosity = 1
+        set tracer diffusivity  = 0.001
+      end
     end
 
 .. code-block:: text
@@ -133,9 +135,9 @@ Using the tracer physics requires four elements: activating the physics, setting
     # FEM
     #---------------------------------------------------
     subsection FEM
-        set velocity order            = 1
-        set pressure order            = 1
-        set tracer order              = 1
+      set velocity order = 1
+      set pressure order = 1
+      set tracer order   = 1
     end
 
 .. code-block:: text
@@ -144,21 +146,21 @@ Using the tracer physics requires four elements: activating the physics, setting
     # Tracer Boundary Conditions
     #---------------------------------------------------
     subsection boundary conditions tracer
-    set number                  = 2
-        subsection bc 0
-        set id = 1
-        set type              = dirichlet
-            subsection dirichlet
-                    set Function expression =  0 
-            end
+      set number = 2
+      subsection bc 0
+        set id   = 1
+        set type = dirichlet
+        subsection dirichlet
+          set Function expression = 0
         end
-        subsection bc 1
-        set id = 2
-        set type              = dirichlet
-            subsection dirichlet
-                    set Function expression =  1 
-            end
+      end
+      subsection bc 1
+        set id   = 2
+        set type = dirichlet
+        subsection dirichlet
+          set Function expression = 1
         end
+      end
     end
 
 The boundary conditions are written in a specific way. 
@@ -181,38 +183,38 @@ must be applied to the outlet flow.
     # Boundary Conditions
     #---------------------------------------------------
     subsection boundary conditions
-        set number                  = 3
-        subsection bc 0
-            set id = 1
-            set type              = function
-            subsection u
-                set Function expression = 0
-            end
-            subsection v
-                set Function expression = 0
-            end
-            subsection w
-                set Function expression = 1
-            end
+      set number = 3
+      subsection bc 0
+        set id   = 1
+        set type = function
+        subsection u
+          set Function expression = 0
         end
-        # The boundary id = 2 will have the tracer
-        subsection bc 1
-            set id = 2
-            set type              = function
-            subsection u
-                set Function expression = 0
-            end
-            subsection v
-                set Function expression = 0
-            end
-            subsection w
-                set Function expression = 4
-            end
+        subsection v
+          set Function expression = 0
         end
-        subsection bc 2
-            set id = 3
-            set type              = noslip
+        subsection w
+          set Function expression = 1
         end
+      end
+      # boundary id2 will have the tracer
+      subsection bc 1
+        set id   = 2
+        set type = function
+        subsection u
+          set Function expression = 0
+        end
+        subsection v
+          set Function expression = 0
+        end
+        subsection w
+          set Function expression = 4
+        end
+      end
+      subsection bc 2
+        set id   = 3
+        set type = noslip
+      end
     end
 
 Simulation and results
@@ -224,12 +226,12 @@ transient and the time steps are short:
 
 .. code-block:: sh
     
-    ../../exe/bin/gls_navier_stokes_3d tracer_through_cad_junction.prm
+    ../../exe/bin/gls_navier_stokes_3d tracer-through-cad-junction.prm
 
 
 The results in ``.pvd`` format can then be viewed using visualisation software such as Paraview. 
 
-.. image:: images/paraview_tracer.png
+.. image:: images/paraview-tracer.png
     :alt: Simulation results in Meshgrid format
     :align: center
 

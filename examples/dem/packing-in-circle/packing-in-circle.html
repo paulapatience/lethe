@@ -3,12 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="2. Packing in Ball" href="../packing-in-ball/packing-in-ball.html" /><link rel="prev" title="Discrete Element Method" href="../dem.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="2. Packing in ball" href="../packing-in-ball/packing-in-ball.html" /><link rel="prev" title="Discrete Element Method" href="../dem.html" />
 
     <meta name="generator" content="sphinx-4.3.1, furo 2021.11.23"/>
-        <title>1. Packing in Circle - Lethe documentation</title>
+        <title>1. Packing in circle - Lethe documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
     
     
@@ -167,56 +168,58 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../first_simulation.html">Launching your first simulation</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../parameters/parameters.html">Parameters guide</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/cfd/cfd.html">General, CFD and Multiphysics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/simulation_control.html">Simulation Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/analytical_solution.html">Analytical solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_cfd.html">Boundary conditions - CFD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Conditions - Multiphysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/box_refinement.html">Box refinement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dimensionality.html">Dimensionality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dynamic_flow_control.html">Dynamic flow control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/fem.html">Finite element interpolation (FEM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/force_and_torque.html">Force and torque calculation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/initial_conditions.html">Initial Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html">Laser heat source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/linear_solver_control.html">Linear Solver Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/mesh_adaptation_control.html">Mesh Adaptation Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/fem.html">Finite element interpolation (FEM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_cfd.html">Boundary conditions - CFD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/source_term.html">Source term</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/analytical_solution.html">Analytical solution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/force_and_torque.html">Force and torque calculation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/post_processing.html">Post-Processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/timer.html">Timer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/non-linear_solver_control.html">Non-linear Solver Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/linear_solver_control.html">Linear Solver Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/stabilization.html">Stabilization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/multiphysics.html">Multiphysics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/volume_of_fluid.html">Multiphase Flow - Volume of Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/boundary_conditions_multiphysics.html">Boundary Contitions - Multiphysics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/nitsche.html">Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/non-linear_solver_control.html">Non-linear Solver Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/physical_properties.html">Physical Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/post_processing.html">Post-Processing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/restart.html">Restart</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/dynamic_flow_control.html">Dynamic flow control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/laser_heat_source.html">Laser heat source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/box_refinement.html">Box refinement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/source_term.html">Source term</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/stabilization.html">Stabilization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/timer.html">Timer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/velocity_source.html">Velocity Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/cfd/volume_of_fluid.html">Volume of Fluid (Multiphase Flow)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/dem/dem.html">Discrete Element Method (DEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/simulation_control.html">Simulation Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/timer.html">Timer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/test.html">Test</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/model_parameters.html">Model Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/insertion_info.html">Insertion Info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_wall.html">Floating Wall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/mesh.html">Mesh</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/boundary_conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_mesh.html">Floating Mesh (Solid Objects)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/floating_wall.html">Floating Wall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/insertion_info.html">Insertion Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/lagrangian_physical_properties.html">Lagrangian Physical Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/mesh.html">Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/model_parameters.html">Model Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/post-processing.html">Post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/simulation_control.html">Simulation Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/test.html">Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/dem/timer.html">Timer</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/unresolved_cfd-dem/void_fraction.html">Void Fraction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/unresolved_cfd-dem/cfd_dem.html">CFD-DEM</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/unresolved-cfd-dem/cfd-dem.html">CFD-DEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/unresolved-cfd-dem/void-fraction.html">Void Fraction</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../parameters/resolved_cfd-dem/resolved_cfd-dem.html">Resolved CFD-DEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../parameters/sharp-immersed-boundary-solver/sharp-immersed-boundary-solver.html">Sharp-Immersed-Boundary-Solver</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../parameters/rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/rpt/rpt_parameters.html">RPT parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/rpt/detector_parameters.html">Detector parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../parameters/rpt/parameter_tuning.html">Parameter tuning</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../parameters/rpt/fem_reconstruction.html">FEM Reconstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/rpt/parameter_tuning.html">Parameter tuning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../parameters/rpt/rpt_parameters.html">RPT parameters</a></li>
 </ul>
 </li>
 </ul>
@@ -232,54 +235,78 @@
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-flow-around-sphere/flow-around-sphere.html">7. 3D Flow around a sphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-flow-over-periodic-hills/3d-flow-over-periodic-hills.html">8. 3D Flow over periodic hills</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/2d-taylor-couette-flow-nitsche/2d-taylor-couette-flow-nitsche.html">9. 2D Taylor-Couette flow using Nitsche immersed boundary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d_mixer_using_single_rotating_frame/3d_mixer_using_single_rotating_frame.html">10. 3D Ribbon Mixer using a Single Rotating Reference Frame</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d_nitsche_mixer_with_pbt_impeller/nitsche_mixer_with_pbt_impeller.html">11. 3D Mixer with Pitched-Blade Turbine Impeller using Nitsche Immersed Boundary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-mixer-using-single-rotating-frame/3d-mixer-using-single-rotating-frame.html">10. 3D Ribbon mixer using a single rotating reference frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../incompressible-flow/3d-nitsche-mixer-with-pbt-impeller/nitsche-mixer-with-pbt-impeller.html">11. 3D Mixer with pitched-blade turbine impeller using Nitsche immersed boundary</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../multiphysics/multiphysics.html">Multiphysics Examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.html">1. Tracer through CAD Junction in Simplex</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">2. Rayleigh-Bénard Convection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">3. Rayleigh-Taylor Instability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/stefan_problem/stefan_problem.html">4. Stefan problem : melting of a solid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">5. Warming Up a Viscous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/dam-break-VOF/dam-break-VOF.html">6. Dam break VOF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/rising-bubble-VOF/rising-bubble-VOF.html">7. Rising bubble VOF</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/melting-cavity/melting-cavity.html">8. Melting Cavity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/laser-heating/laser-heating.html">9. Laser heating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../multiphysics/laser-meltpool/laser-meltpool.html">10. Laser meltpool</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/vof.html">1. VOF</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/dam-break/dam-break.html">1.1. Dam-break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rayleigh-taylor-instability/rayleigh-taylor-instability.html">1.2. Rayleigh-Taylor instability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rising-bubble/rising-bubble.html">1.3. Rising bubble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/3d-dam-break/3d-dam-break.html">1.4. 3D Dam Break With an Obstacle</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="../dem.html">Discrete Element Method</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">1. Packing in Circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../packing-in-ball/packing-in-ball.html">2. Packing in Ball</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rotating-drum/rotating-drum.html">3. Rotating Drum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rotating-drum-with-post-processing/rotating-drum-with-post-processing.html">4. Rotating Drum with Post-Processing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rotation-of-box/rotation-of-box.html">5. Rotation of Box</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../silo/silo.html">6. Silo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../3d-small-scale-rotating-drum/3d-small-scale-rotating-drum.html">7. Small Scale Rotating Drum (3D)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../granular-mixer/granular-mixer.html">8. Granular Mixer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/heat-transfer.html">2. Heat transfer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/rayleigh-benard-convection/rayleigh-benard-convection.html">2.1. Rayleigh-Bénard Convection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/stefan-problem/stefan-problem.html">2.2. Stefan problem : melting of a solid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/warming-up-a-viscous-fluid/warming-up-a-viscous-fluid.html">2.3. Warming Up a Viscous Fluid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/melting-cavity/melting-cavity.html">2.4. Melting Cavity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/laser-heating/laser-heating.html">2.5. Laser heating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/laser-meltpool/laser-meltpool.html">2.6. Laser meltpool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/concentric-heat-exchanger/concentric-heat-exchanger.html">2.7. Concentric heat exchanger</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../unresolved_cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">1. Cylindrical Packed Bed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../unresolved_cfd-dem/square-fluidized-bed/square-fluidized-bed.html">2. Gas-Solid Fluidized Bed</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../multiphysics/tracer.html">3. Tracer</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../multiphysics/tracer-through-cad-junction/tracer-through-cad-junction.html">3.1. Tracer through CAD Junction in Simplex</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../resolved_cfd-dem/resolved_cfd-dem.html">Resolved CFD-DEM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../resolved_cfd-dem/cylinder-with-sharp-interface/cylinder-with-sharp-interface.html">1. Flow around a cylinder using the sharp interface method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../resolved_cfd-dem/sedimentation-1-particle/sedimentation-1-particle.html">2. Sedimentation of one particle.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../resolved_cfd-dem/sphere-carreau-with-sharp-interface/sphere-carreau-with-sharp-interface.html">3. Non-Newtonian flow past a sphere</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../rpt/photon-count-calculation-in-a-cylindrical-vessel/photon-count-calculation-in-a-cylindrical-vessel.html">1. Photon Count Calculation in a Cylindrical Vessel</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../dem.html">Discrete Element Method</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">1. Packing in circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../packing-in-ball/packing-in-ball.html">2. Packing in ball</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../small-scale-rotating-drum/small-scale-rotating-drum.html">3. Small scale rotating drum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../small-scale-rotating-drum-post-processing/small-scale-rotating-drum-post-processing.html">4. Small scale rotating drum post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rotating-drum/rotating-drum.html">5. Rotating drum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rotating-drum-with-post-processing/rotating-drum-with-post-processing.html">6. Rotating drum with post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rotation-of-box/rotation-of-box.html">7. Rotation of box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../silo/silo.html">8. Silo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rectangular-hopper/rectangular-hopper.html">9. Rectangular hopper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../granular-dam-break/granular-dam-break.html">10. Granular dam-break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../granular-mixer/granular-mixer.html">11. Granular mixer</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../unresolved-cfd-dem/unresolved-cfd-dem.html">Unresolved CFD-DEM</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/cylindrical-packed-bed/cylindrical-packed-bed.html">1. Cylindrical packed bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-fluidized-bed/gas-solid-fluidized-bed.html">2. Gas-solid fluidized bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/gas-solid-spouted-bed/gas-solid-spouted-bed.html">3. Gas-solid spouted bed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../unresolved-cfd-dem/boycott-effect/boycott-effect.html">4. Boycott Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../sharp-immersed-boundary-solver/sharp-immersed-boundary-solver.html">Sharp Immersed Boundary Solver</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../sharp-immersed-boundary-solver/resolved-cfd-dem.html">1. Resolved CFD-DEM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary-solver/sedimentation-1-particle/sedimentation-1-particle.html">1.1. Sedimentation of one particle</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../sharp-immersed-boundary-solver/incompressible-flow.html">2. Incompressible Flow</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary-solver/cylinder-with-sharp-interface/cylinder-with-sharp-interface.html">2.1. Flow around a cylinder using the sharp interface method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary-solver/sphere-carreau-with-sharp-interface/sphere-carreau-with-sharp-interface.html">2.2. Non-Newtonian flow past a sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary-solver/3d-composite-mixer-with-pbt-impeller/3d-composite-mixer-with-pbt-impeller.html">2.3. 3D Mixer with pitched-blade turbine impeller using Composite Sharp-immersed boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../sharp-immersed-boundary-solver/3d-opencascade-mixer-with-pbt-impeller/3d-opencascade-mixer-with-pbt-impeller.html">2.4. 3D Mixer with pitched-blade turbine impeller using OpenCascade Sharp-immersed boundary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rpt/rpt.html">Radioactive Particle Tracking (RPT)</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rpt/photon-count-calculation-in-a-cylindrical-vessel/photon-count-calculation-in-a-cylindrical-vessel.html">1. Photon count calculation in a cylindrical vessel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rpt/tuning-parameters-with-nomad/tuning-parameters-with-nomad.html">2. Tuning Count Calculation Model Parameters with NOMAD</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../theory/theory.html">Theory</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../theory/fluid_dynamics/fluid_dynamics.html">Fluid dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../theory/theory.html">Theory</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../theory/fluid_dynamics/fluid_dynamics.html">Fluid dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../theory/fluid_dynamics/navier-stokes.html">The Incompressible Navier-Stokes equations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../theory/fluid_dynamics/fem_formulation.html">Origin of the finite element formulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../theory/fluid_dynamics/stabilization.html">On the need for stabilization</a></li>
@@ -291,8 +318,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../theory/unresolved_cfd-dem/unresolved_cfd-dem.html">Unresolved CFD-DEM coupling</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tools/tools.html">Tools</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../tools/gmsh/gmsh.html">Introduction on how to use GMSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tools/automatic_launch/automatic_launch.html">How to automatically create and launch Lethe simulations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../publications.html">Publications</a></li>
@@ -325,7 +353,7 @@
         </div>
         <article role="main">
           <section id="packing-in-circle">
-<h1><span class="section-number">1. </span>Packing in Circle<a class="headerlink" href="#packing-in-circle" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Packing in circle<a class="headerlink" href="#packing-in-circle" title="Permalink to this headline">¶</a></h1>
 <p>This is the first example of Lethe-DEM. This example introduces the concept of parameter files to parametrize Lethe simulations. It is strongly recommended to visit <a class="reference external" href="../../../parameters/dem/dem.html">DEM parameters</a> for more detailed information on the concepts and physical meaning of the parameters in Lethe-DEM.</p>
 <section id="features">
 <h2><span class="section-number">1.1. </span>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
@@ -335,15 +363,13 @@
 <li><p>Displays the selection of models and physical properties</p></li>
 </ul>
 </section>
-<section id="location-of-the-examples">
-<h2><span class="section-number">1.2. </span>Location of the examples<a class="headerlink" href="#location-of-the-examples" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">/examples/dem/2d_packing_in_circle/packing_in_circle.prm</span></code></p>
-</div></blockquote>
+<section id="files-used-in-this-example">
+<h2><span class="section-number">1.2. </span>Files used in this example<a class="headerlink" href="#files-used-in-this-example" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">/examples/dem/2d-packing-in-circle/packing-in-circle.prm</span></code></p>
 </section>
 <section id="description-of-the-case">
 <h2><span class="section-number">1.3. </span>Description of the case<a class="headerlink" href="#description-of-the-case" title="Permalink to this headline">¶</a></h2>
-<p>Packing in circle is the most basic example in Lethe-DEM. In this example, 50 two-dimensional particles are inserted in a circle. Due to the action of gravity, they accelerate in the defined direction of the gravity. Upon reaching the outer periphery of the circle (triangulation boundary wall), the particle-wall contact stops the particles from leaving the triangulation. Finally a balance forms between the particle-particle and particle-wall contact force and the gravity force. Particles lose kinetic energy (and velocity), and get packed on the triangulation boundary and remain at rest.</p>
+<p>Packing in a circle is the most basic example in Lethe-DEM. In this example, 50 two-dimensional particles are inserted in a circle. Due to the action of gravity, they accelerate in the defined direction of gravity. Upon reaching the outer periphery of the circle (the boundary walls of the triangulation), the particle-wall contact stops the particles from leaving the triangulation. Finally a balance forms between the particle-particle and particle-wall contact force and the gravity force. Particles lose kinetic energy (and velocity), get packed on the triangulation boundary, and remain at rest.</p>
 </section>
 <section id="parameter-file">
 <h2><span class="section-number">1.4. </span>Parameter file<a class="headerlink" href="#parameter-file" title="Permalink to this headline">¶</a></h2>
@@ -358,20 +384,22 @@
 <h3><span class="section-number">1.4.1. </span>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">mesh</span></code> subsection specifies the computational grid:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection mesh
-    set type                                                = dealii
-    set grid type                                           = hyper_ball
-    set grid arguments                                      = 0.0, 0.0 : 0.1 : false
-    set initial refinement                                  = 3
+  set type                                = dealii
+  set grid type                           = hyper_ball
+  set grid arguments                      = 0.0, 0.0 : 0.1 : false
+  set initial refinement                  = 3
+  set expand particle-wall contact search = true
 end
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> specifies the mesh format used. At the moment, Lethe supports two mesh formats: <code class="docutils literal notranslate"><span class="pre">dealii</span></code> and <code class="docutils literal notranslate"><span class="pre">gmsh</span></code>. <code class="docutils literal notranslate"><span class="pre">dealii</span></code> meshes are in-situ generated meshes for simple geometries. The type of grid generated is specified by the <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">type</span></code> parameters and this grid is parametrized by its <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">arguments</span></code>. We refer to the documentation of the deal.ii <a class="reference external" href="https://www.dealii.org/current/doxygen/deal.II/namespaceGridGenerator.html">GridGenerator</a> for a detailed explanation of the available grids.</p>
-<p>Since the packing-in-circle problem domain is a circle, we use the <em>hyper_ball</em> <code class="docutils literal notranslate"><span class="pre">grid_type</span></code>. The arguments of this grid type are the position of the center, the radius of the ball (circle), and the option to colorize the boundaries in order to give each of them a unique ID. The IDs will be used to set the boundary conditions on specific parts of the boundary of the domain. The <code class="docutils literal notranslate"><span class="pre">colorize</span></code> option is set to false and all boundaries would have been given the ID <code class="docutils literal notranslate"><span class="pre">0</span></code>. This will constitute the walls of the domain.</p>
+<p>Since the domain of the packing-in-circle problem is a circle, we use the <em>hyper_ball</em> as <code class="docutils literal notranslate"><span class="pre">grid_type</span></code>. The <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">arguments</span></code> of this <code class="docutils literal notranslate"><span class="pre">grid_type</span></code> determine the position of the center, the radius of the ball (circle), and whether the colorize option is going to be used (<code class="docutils literal notranslate"><span class="pre">true</span></code>) or not (<code class="docutils literal notranslate"><span class="pre">false</span></code>). By setting the latter argument to <code class="docutils literal notranslate"><span class="pre">true</span></code>, each of the boundaries will receive a unique ID. The IDs will be used to set the boundary conditions on specific parts of the boundary of the domain. If the <code class="docutils literal notranslate"><span class="pre">colorize</span></code> option is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, all boundaries would have been given the ID <code class="docutils literal notranslate"><span class="pre">0</span></code>. This will constitute the walls of the domain.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">expand</span> <span class="pre">particle-wall</span> <span class="pre">contact</span> <span class="pre">search</span></code> parameter is an advanced feature of Lethe-DEM that expands the particle-wall contact detection list by including the walls of the neighboring cells.  This feature is necessary when the geometry is concave and presents curvature, as is the case of the circle in which the simulation is carried out.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since the simulation is two-dimensional, we have a circle instead of a ball for the triangulation.</p>
 </div>
-<p>The last parameter specifies the <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">refinement</span></code> of the grid. Most deal.ii grid generators contain a minimal number of cells. Indicating an <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">refinement=3</span></code> implies that the initial mesh is refined 3 times. In 2D, each cell is divided by 4 per refinement.</p>
+<p>The last parameter is the <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">refinement</span></code> of the grid. Most deal.ii grid generators contain a minimal number of cells. Indicating an <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">refinement=3</span></code> implies that the initial mesh is refined 3 times. Each refinement corresponds to dividing the cell element into two for each dimension, i.e, in 2D, each cell is divided into 4 per refinement.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The computational complexity of the functions in Lethe-DEM is either a function of the number of particles or a function of the number of cells. As the number of refinement increases, the number of cells in the triangulation increases, while the number of particles in each cell decreases. This is in favor of particle-based functions (such as fine search), whereas cell-based functions (such as sorting particles in the cells) become more computationally expensive. Hence, we recommend the users choose an <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">refinement</span></code> to reach an average cell size equal to 3-4 times the particle diameter.</p>
@@ -381,16 +409,16 @@ end
 <h3><span class="section-number">1.4.2. </span>Insertion info<a class="headerlink" href="#insertion-info" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">insertion</span> <span class="pre">info</span></code> subsection manages the insertion of particles.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection insertion info
-    set insertion method                                                            = non_uniform
-    set inserted number of particles at each time step  = 50
-    set insertion frequency                                                 = 1000000
-    set insertion box minimum x                                     = -0.05
-    set insertion box minimum y                             = 0
-    set insertion box maximum x                             = 0.05
-    set insertion box maximum y                                     = 0.07
-    set insertion distance threshold                                        = 2
-    set insertion random number range                                       = 0.75
-    set insertion random number seed                                        = 19
+  set insertion method                               = non_uniform
+  set inserted number of particles at each time step = 50
+  set insertion frequency                            = 1000000
+  set insertion box minimum x                        = -0.05
+  set insertion box minimum y                        = 0
+  set insertion box maximum x                        = 0.05
+  set insertion box maximum y                        = 0.07
+  set insertion distance threshold                   = 2
+  set insertion random number range                  = 0.75
+  set insertion random number seed                   = 19
 end
 </pre></div>
 </div>
@@ -412,31 +440,29 @@ end
 </section>
 <section id="lagrangian-physical-properties">
 <h3><span class="section-number">1.4.3. </span>Lagrangian physical properties<a class="headerlink" href="#lagrangian-physical-properties" title="Permalink to this headline">¶</a></h3>
-<p>The gravitational acceleration as well as the physical properties of particles and walls are specified in the <code class="docutils literal notranslate"><span class="pre">Lagrangian</span> <span class="pre">physical</span> <span class="pre">properties</span></code> subsection. These properties include diameter and density of particles, Young’s modulus, Poisson’s ratio, restitution coefficient, friction and rolling friction coefficients.</p>
+<p>The gravitational acceleration as well as the physical properties of particles and walls are specified in the <code class="docutils literal notranslate"><span class="pre">Lagrangian</span> <span class="pre">physical</span> <span class="pre">properties</span></code> subsection. These properties include diameter and density of particles, Young’s modulus, Poisson’s ratio, restitution coefficient and friction coefficients.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection lagrangian physical properties
-    set gx                                                                          = 0.0
-    set gy                                                                          = -9.81
-    set number of particle types                    = 1
-        subsection particle type 0
-        set size distribution type                                  = uniform
-            set diameter                                            = 0.005
-            set number                                                              = 150
-            set density particles                                   = 2000
-            set young modulus particles                     = 100000000
-            set poisson ratio particles             = 0.3
-            set restitution coefficient particles   = 0.9
-            set friction coefficient particles      = 0.3
-            set rolling friction particles          = 0.1
-    end
-    set young modulus wall                                          = 100000000
-    set poisson ratio wall                                          = 0.3
-    set restitution coefficient wall                        = 0.9
-    set friction coefficient wall                           = 0.3
-    set rolling friction wall                               = 0.1
+  set gx                       = 0.0
+  set gy                       = -9.81
+  set number of particle types = 1
+  subsection particle type 0
+    set size distribution type            = uniform
+    set diameter                          = 0.005
+    set number                            = 150
+    set density particles                 = 2000
+    set young modulus particles           = 100000000
+    set poisson ratio particles           = 0.3
+    set restitution coefficient particles = 0.9
+    set friction coefficient particles    = 0.3
+  end
+  set young modulus wall           = 100000000
+  set poisson ratio wall           = 0.3
+  set restitution coefficient wall = 0.9
+  set friction coefficient wall    = 0.3
 end
 </pre></div>
 </div>
-<p>First, gravitational acceleration is defined. Since the simulation is two-dimensional, we do not define the gravity in <cite>z</cite> direction. The <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">particle</span> <span class="pre">types</span></code> parameter specifies the number of particle types in a simulation. Particles with different sizes, size distributions, and physical properties have to be defined as separate particle types. The <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">distribution</span> <span class="pre">type</span></code> parameter specifies the size distribution for each particle type. The acceptable choices are <code class="docutils literal notranslate"><span class="pre">uniform</span></code> and <code class="docutils literal notranslate"><span class="pre">normal</span></code> distributions. Since this simulation is monodispersed, the <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">distribution</span> <span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">uniform</span></code>. <code class="docutils literal notranslate"><span class="pre">diameter</span></code> and <code class="docutils literal notranslate"><span class="pre">density</span></code> of particles, <code class="docutils literal notranslate"><span class="pre">number</span></code> of particles of each type, <code class="docutils literal notranslate"><span class="pre">young</span> <span class="pre">modulus</span></code>, <code class="docutils literal notranslate"><span class="pre">poisson</span> <span class="pre">ratio</span></code>, <code class="docutils literal notranslate"><span class="pre">restitution</span> <span class="pre">coefficient</span></code>, <code class="docutils literal notranslate"><span class="pre">friction</span> <span class="pre">coefficient</span></code>, and <code class="docutils literal notranslate"><span class="pre">rolling</span> <span class="pre">friction</span> <span class="pre">coefficient</span></code> are defined.</p>
+<p>First, gravitational acceleration is defined. Since the simulation is two-dimensional, we do not define the gravity in <cite>z</cite> direction. The <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">particle</span> <span class="pre">types</span></code> parameter specifies the number of particle types in a simulation. Particles with different sizes, size distributions, and physical properties have to be defined as separate particle types. The <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">distribution</span> <span class="pre">type</span></code> parameter specifies the size distribution for each particle type. The acceptable choices are <code class="docutils literal notranslate"><span class="pre">uniform</span></code> and <code class="docutils literal notranslate"><span class="pre">normal</span></code> distributions. Since this simulation is monodispersed, the <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">distribution</span> <span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">uniform</span></code>. <code class="docutils literal notranslate"><span class="pre">diameter</span></code> and <code class="docutils literal notranslate"><span class="pre">density</span></code> of particles, <code class="docutils literal notranslate"><span class="pre">number</span></code> of particles of each type, <code class="docutils literal notranslate"><span class="pre">young</span> <span class="pre">modulus</span></code>, <code class="docutils literal notranslate"><span class="pre">poisson</span> <span class="pre">ratio</span></code>, <code class="docutils literal notranslate"><span class="pre">restitution</span> <span class="pre">coefficient</span></code> and <code class="docutils literal notranslate"><span class="pre">friction</span> <span class="pre">coefficient</span></code> are defined.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">diameter</span></code> parameter defines the diameter of the particles in a <code class="docutils literal notranslate"><span class="pre">uniform</span></code> distribution. For a <code class="docutils literal notranslate"><span class="pre">normal</span></code> distribution, we need to define <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">diameter</span></code> and <code class="docutils literal notranslate"><span class="pre">standard</span> <span class="pre">deviation</span></code> parameters.</p>
@@ -446,16 +472,17 @@ end
 <h3><span class="section-number">1.4.4. </span>Model parameters<a class="headerlink" href="#model-parameters" title="Permalink to this headline">¶</a></h3>
 <p>In the <code class="docutils literal notranslate"><span class="pre">model</span> <span class="pre">parameters</span></code> subsection, DEM simulation parameters are defined.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection model parameters
-  set contact detection method                                      = dynamic
-  set dynamic contact search size coefficient       = 0.7
-  set neighborhood threshold                                        = 1.5
-  set particle particle contact force method    = hertz_mindlin_limit_overlap
-  set particle wall contact force method        = nonlinear
-  set integration method                                            = velocity_verlet
+  set contact detection method                = dynamic
+  set dynamic contact search size coefficient = 0.7
+  set neighborhood threshold                  = 1.5
+  set particle particle contact force method  = hertz_mindlin_limit_overlap
+  set particle wall contact force method      = nonlinear
+  set integration method                      = velocity_verlet
+  set rolling resistance torque method        = constant_resistance
 end
 </pre></div>
 </div>
-<p>These parameters include <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">method</span></code> and its subsequent information (<code class="docutils literal notranslate"><span class="pre">dynamic</span> <span class="pre">contact</span> <span class="pre">search</span> <span class="pre">size</span> <span class="pre">coefficient</span></code> <strong>or</strong> <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">frequency</span></code> for <code class="docutils literal notranslate"><span class="pre">dynamic</span></code> <strong>or</strong> <code class="docutils literal notranslate"><span class="pre">constant</span></code> contact detection method), <code class="docutils literal notranslate"><span class="pre">neighborhood</span> <span class="pre">threshold</span></code> (which defines the contact neighbor list size: <code class="docutils literal notranslate"><span class="pre">neighborhood</span> <span class="pre">threshold</span></code> * particle diameter), <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">particle</span> <span class="pre">contact</span> <span class="pre">force</span> <span class="pre">method</span></code>, <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">wall</span> <span class="pre">contact</span> <span class="pre">force</span> <span class="pre">method</span></code> and <code class="docutils literal notranslate"><span class="pre">integration</span> <span class="pre">method</span></code>. All the concepts, models and choices are explained in <a class="reference external" href="../../../parameters/dem/dem.html">DEM parameters</a>.</p>
+<p>These parameters include <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">method</span></code> and its subsequent information (<code class="docutils literal notranslate"><span class="pre">dynamic</span> <span class="pre">contact</span> <span class="pre">search</span> <span class="pre">size</span> <span class="pre">coefficient</span></code> <strong>or</strong> <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">frequency</span></code> for <code class="docutils literal notranslate"><span class="pre">dynamic</span></code> <strong>or</strong> <code class="docutils literal notranslate"><span class="pre">constant</span></code> contact detection method), <code class="docutils literal notranslate"><span class="pre">neighborhood</span> <span class="pre">threshold</span></code> (which defines the contact neighbor list size: <code class="docutils literal notranslate"><span class="pre">neighborhood</span> <span class="pre">threshold</span></code> * particle diameter), <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">particle</span> <span class="pre">contact</span> <span class="pre">force</span> <span class="pre">method</span></code>, <code class="docutils literal notranslate"><span class="pre">particle</span> <span class="pre">wall</span> <span class="pre">contact</span> <span class="pre">force</span> <span class="pre">method</span></code> and <code class="docutils literal notranslate"><span class="pre">integration</span> <span class="pre">method</span></code>. All the concepts, models, and choices are explained in <a class="reference external" href="../../../parameters/dem/dem.html">DEM parameters</a>.</p>
 <p>By setting <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">method</span> <span class="pre">=</span> <span class="pre">constant</span></code>. contact search will be carried out at constant frequency (every <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">frequency</span></code> iterations). Normally, the <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">frequency</span></code> should be a value between 5 and 50. The contact frequency should be chosen such that the particles do not travel more than half a cell between two contact detection. Small values of <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">frequency</span></code> lead to long simulation times, while large values of <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">frequency</span></code> may lead to late detection of collisions. Late detection of collisions can result in very large particles velocities (popcorn jump of particles in a simulation) or particles leaving the simulation domain.</p>
 <p>By setting <code class="docutils literal notranslate"><span class="pre">contact</span> <span class="pre">detection</span> <span class="pre">method</span> <span class="pre">=</span> <span class="pre">dynamic</span></code>, Lethe-DEM rebuilds the contact lists automatically. In this mode, Lethe-DEM stores the displacements of each particle in the simulation since the last contact detection. If the maximum displacement of a particle exceeds the smallest contact search criterion (explained in the following), then the iteration is a contact search iteration and the contact list is rebuilt.</p>
 <p>The smallest contact search criterion is the minimum of the smallest cell size in the triangulation or the radius of the spherical region in fine search (explained in the following), and it is defined as:</p>
@@ -468,10 +495,10 @@ end
 <h3><span class="section-number">1.4.5. </span>Simulation control<a class="headerlink" href="#simulation-control" title="Permalink to this headline">¶</a></h3>
 <p>The last subsection, which is generally the one we put at the top of the parameter files, is the <code class="docutils literal notranslate"><span class="pre">simulation</span> <span class="pre">control</span></code> . <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">step</span></code>, end time, log and <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">frequency</span></code> are defined here. Additionally, users can specify the output folder for the simulation results in this subsection. The <code class="docutils literal notranslate"><span class="pre">log</span> <span class="pre">frequency</span></code> parameter controls the frequency at which the iteration number is printed on the terminal. If <code class="docutils literal notranslate"><span class="pre">log</span> <span class="pre">frequency</span> <span class="pre">=</span> <span class="pre">1000</span></code> the iteration number will be printed out every 1000 iterations. This is an easy way to monitor the progress of the simulation.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>subsection simulation control
-  set time step                             = 1e-6
-  set time end                                              = 3
-  set log frequency                                 = 10000
-  set output frequency                      = 10000
+  set time step        = 1e-6
+  set time end         = 3
+  set log frequency    = 10000
+  set output frequency = 10000
 end
 </pre></div>
 </div>
@@ -480,7 +507,7 @@ end
 <section id="running-the-simulation">
 <h2><span class="section-number">1.5. </span>Running the simulation<a class="headerlink" href="#running-the-simulation" title="Permalink to this headline">¶</a></h2>
 <p>Launching the simulation is as simple as specifying the executable name and the parameter file. Assuming that the <code class="docutils literal notranslate"><span class="pre">dem_2d</span></code> executable is within your path, the simulation can be launched by typing:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>dem_2d packing_in_circle.prm
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>dem_2d packing-in-circle.prm
 </pre></div>
 </div>
 <p>Lethe will generate a number of files. The most important one bears the extension <code class="docutils literal notranslate"><span class="pre">.pvd</span></code>. It can be read by popular visualization programs such as <a class="reference external" href="https://www.paraview.org/">Paraview</a>.</p>
@@ -492,7 +519,7 @@ end
 <section id="results">
 <h2><span class="section-number">1.6. </span>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
 <p>Packed particles at the end of simulation:</p>
-<img alt="velocity distribution" class="align-center" src="../../../_images/packing_in_circle.png"/>
+<img alt="velocity distribution" class="align-center" src="../../../_images/packing-in-circle.png"/>
 </section>
 </section>
 
@@ -506,7 +533,7 @@ end
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><span class="section-number">2. </span>Packing in Ball</div>
+                <div class="title"><span class="section-number">2. </span>Packing in ball</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -547,9 +574,9 @@ end
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1. Packing in Circle</a><ul>
+<li><a class="reference internal" href="#">1. Packing in circle</a><ul>
 <li><a class="reference internal" href="#features">1.1. Features</a></li>
-<li><a class="reference internal" href="#location-of-the-examples">1.2. Location of the examples</a></li>
+<li><a class="reference internal" href="#files-used-in-this-example">1.2. Files used in this example</a></li>
 <li><a class="reference internal" href="#description-of-the-case">1.3. Description of the case</a></li>
 <li><a class="reference internal" href="#parameter-file">1.4. Parameter file</a><ul>
 <li><a class="reference internal" href="#mesh">1.4.1. Mesh</a></li>
@@ -577,6 +604,8 @@ end
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/scripts/furo.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>
